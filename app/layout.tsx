@@ -14,21 +14,21 @@ const geistMono = Geist_Mono({
 
 // 1. High-Authority Metadata targeting our 2026 Audit
 export const metadata: Metadata = {
-  title: "NOMADTAX 2026 | Digital Nomad Visa Comparison & Tax Savings Index",
+  title: "NomadTaxIndex 2026 | Digital Nomad Visa Comparison & Tax Savings Index",
   description: "The global benchmark for 2026 digital nomad visa requirements. Compare income thresholds, tax rates, and net savings for 15+ countries with mathematical transparency.",
   keywords: "digital nomad tax calculator 2026, spain nomad visa requirements, france talent passport savings, best countries for 0% tax nomads, nomad residency roadmap, digital nomad visa countries, digital nomad tax calculator 2026, remote work visa requirements, spain digital nomad visa income, brazil nomad visa 2026",
-  authors: [{ name: "NomadTax Intelligence" }],
-  creator: "NomadTax",
-  publisher: "NomadTax",
+  authors: [{ name: "NomadTaxIndex Intelligence" }],
+  creator: "NomadTaxIndex",
+  publisher: "NomadTaxIndex",
   robots: "index, follow",
   alternates: {
-    canonical: "https://nomadtax.io", // Replace with your actual domain
+    canonical: "https://NomadTaxIndex.com", // Replace with your actual domain
   },
   openGraph: {
-    title: "NOMADTAX 2026 | Intelligence Dashboard",
+    title: "NomadTaxIndex 2026 | Intelligence Dashboard",
     description: "Mathematical transparency for your next global move. Compare 15+ countries side-by-side.",
-    url: "https://nomadtax.io",
-    siteName: "NomadTax",
+    url: "https://NomadTaxIndex.com",
+    siteName: "NomadTaxIndex",
     images: [
       {
         url: "/og-image.png", // Make sure to add an OG image to your public folder
@@ -41,9 +41,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NOMADTAX 2026 | Digital Nomad Index",
+    title: "NomadTaxIndex 2026 | Digital Nomad Index",
     description: "Calculate your net savings after tax and rent in 15+ countries.",
   },
+  icons: {
+  icon: '/favicon.ico', // Standard favicon
+  shortcut: '/favicon-32x32.png', // Secondary
+  apple: '/apple-touch-icon.png', // Apple specific
+},
 };
 
 // 2. Mobile UI / Theme Optimization
@@ -63,7 +68,7 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "NomadTax 2026 Calculator",
+    "name": "NomadTaxIndex 2026 Calculator",
     "operatingSystem": "Web",
     "applicationCategory": "FinanceApplication",
     "description": "A mathematical transparency tool for digital nomads to calculate tax savings and residency paths.",

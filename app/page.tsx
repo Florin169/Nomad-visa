@@ -184,7 +184,7 @@ export default function LandingPage() {
               <Globe size={14} className="text-white" />
             </div>
             <a href="/" className="text-sm font-bold tracking-tight text-white group">
-              NOMAD<span className="text-blue-400 group-hover:text-blue-300 transition-colors">TAX</span>
+              NOMAD<span className="text-blue-400 group-hover:text-blue-300 transition-colors">TAX INDEX</span>
             </a>
             <span className="text-xs text-zinc-700 font-mono ml-1">{currentYear}</span>
           </div>

@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
   const { country: countryId } = await params;
   const country = getCountryById(countryId);
 
-  if (!country) return { title: "Country Not Found | NomadTax" };
+  if (!country) return { title: "Country Not Found | NomadTaxIndex" };
 
   const title = `${country.name} Digital Nomad Visa 2026: Tax Calculator & Requirements`;
   const description = `Calculate your net savings in ${country.name} with the ${country.visaType}. Features 2026 tax rates (${(country.taxRate * 100).toFixed(0)}%), $${country.minIncome}/mo minimum income checks, and full document checklist.`;

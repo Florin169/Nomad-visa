@@ -36,7 +36,7 @@ export default function CountryIntelligenceClient({ country }: { country: VisaCo
             Back
           </a>
           <div className="text-sm font-bold text-white">
-            NOMAD<span className="text-blue-400">TAX</span>
+            NOMAD<span className="text-blue-400">TAX INDEX</span>
           </div>
           <button 
             className="flex items-center gap-2 text-sm text-zinc-500 hover:text-zinc-300 transition-colors"

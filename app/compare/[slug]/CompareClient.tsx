@@ -25,8 +25,8 @@ export default function CompareClient({ countryA, countryB }: CompareClientProps
             <ArrowLeft size={15} aria-hidden="true" />
             Back to Index
           </a>
-          <div className="flex items-center gap-2 text-sm font-bold text-white">
-            NOMAD<span className="text-blue-400">TAX</span>
+          <div className="flex items-center text-sm font-bold text-white">
+            NOMAD<span className="text-blue-400">TAX INDEX</span>
           </div>
           <div />
         </div>
