@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 
 // 1. High-Authority Metadata targeting our 2026 Audit
 export const metadata: Metadata = {
-  title: "NOMADTAX 2026 | Digital Nomad Visa & Tax Savings Index",
-  description: "The global benchmark for digital nomad tax optimization. Calculate net savings, living costs, and 2026 residency requirements for Spain, France, South Korea, and 15+ breakout hubs.",
-  keywords: "digital nomad tax calculator 2026, spain nomad visa requirements, france talent passport savings, best countries for 0% tax nomads, nomad residency roadmap",
+  title: "NOMADTAX 2026 | Digital Nomad Visa Comparison & Tax Savings Index",
+  description: "The global benchmark for 2026 digital nomad visa requirements. Compare income thresholds, tax rates, and net savings for 15+ countries with mathematical transparency.",
+  keywords: "digital nomad tax calculator 2026, spain nomad visa requirements, france talent passport savings, best countries for 0% tax nomads, nomad residency roadmap, digital nomad visa countries, digital nomad tax calculator 2026, remote work visa requirements, spain digital nomad visa income, brazil nomad visa 2026",
   authors: [{ name: "NomadTax Intelligence" }],
   creator: "NomadTax",
   publisher: "NomadTax",

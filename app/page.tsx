@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   TrendingUp,
   Globe,
@@ -161,6 +161,7 @@ export default function LandingPage() {
   const [income, setIncome] = useState(6000);
   const [searchQuery, setSearchQuery] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
 
   return (
     <main className="min-h-screen bg-zinc-950 text-white pb-16">
@@ -194,7 +195,10 @@ export default function LandingPage() {
             <a href="#index" className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors">
               Index
             </a>
-            <button className="text-sm bg-blue-500 hover:bg-blue-400 transition-colors text-white px-4 py-1.5 rounded-lg font-medium">
+            <button 
+              onClick={() => setShowSearch(true)}
+              className="text-sm bg-blue-500 hover:bg-blue-400 transition-colors text-white px-4 py-1.5 rounded-lg font-medium"
+            >
               Get Started
             </button>
           </div>
@@ -238,7 +242,10 @@ export default function LandingPage() {
             <a href="#index" onClick={() => setIsMenuOpen(false)} className="block text-sm text-zinc-500 hover:text-zinc-300 transition-colors py-3 border-b border-zinc-900">
               Tax Index
             </a>
-            <button className="w-full text-sm bg-blue-500 hover:bg-blue-400 transition-colors text-white px-4 py-3 rounded-lg font-medium mt-6">
+            <button 
+              onClick={() => setShowSearch(true)}
+              className="w-full text-sm bg-blue-500 hover:bg-blue-400 transition-colors text-white px-4 py-3 rounded-lg font-medium mt-6"
+            >
               Get Started
             </button>
           </div>
@@ -275,18 +282,29 @@ export default function LandingPage() {
             </p>
 
             {/* Search bar */}
-            <div className="flex items-center gap-3 max-w-md mx-auto bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 focus-within:border-blue-500/50 transition-colors">
-              <label htmlFor="country-search" className="sr-only">Search for a country</label>
-              <Search size={16} className="text-zinc-600 shrink-0" />
-              <input
-                id="country-search"
-                type="text"
-                placeholder="Search a country (e.g. Spain, France)..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="flex-1 bg-transparent text-sm text-white placeholder-zinc-600 outline-none"
-              />
-            </div>
+            <AnimatePresence>
+              {showSearch && (
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                >
+                  <div className="flex items-center gap-3 max-w-md mx-auto bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 focus-within:border-blue-500/50 transition-colors mt-4">
+                    <label htmlFor="country-search" className="sr-only">Search for a country</label>
+                    <Search size={16} className="text-zinc-600 shrink-0" />
+                    <input
+                      id="country-search"
+                      type="text"
+                      placeholder="Search a country (e.g. Spain, France)..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="flex-1 bg-transparent text-sm text-white placeholder-zinc-600 outline-none"
+                    />
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
         </section>
 
