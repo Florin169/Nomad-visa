@@ -133,7 +133,7 @@ export default function CountryIntelligenceClient({ country }: { country: VisaCo
         </motion.article>
 
         {/* Tabs - Aria Role for Accessibility/SEO */}
-        <div className="flex overflow-x-auto gap-2 bg-zinc-900 border border-zinc-800 rounded-xl p-1.5 mb-6 w-fit" role="tablist" aria-label="Visa Details Sections">
+        <div className="flex overflow-x-auto gap-2 bg-zinc-900 border border-zinc-800 rounded-xl p-1.5 mb-6 flex w-full" role="tablist" aria-label="Visa Details Sections">
           {tabs.map((t) => (
             <button
               key={t.id}
@@ -142,7 +142,7 @@ export default function CountryIntelligenceClient({ country }: { country: VisaCo
               aria-controls={`${t.id}-panel`}
               onClick={() => setTab(t.id)}
               className={`
-                flex items-center gap-2 px-3 sm:px-4 py-2.5 rounded-lg text-sm font-medium transition-all
+                flex items-center gap-2 px-3 sm:px-4 py-2 px-1 rounded-lg text-[11px] sm:text-sm font-bold transition-all
                 ${tab === t.id ? "bg-blue-500 text-white" : "text-zinc-500 hover:text-zinc-300"}
               `}
             >

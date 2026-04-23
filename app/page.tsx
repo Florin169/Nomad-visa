@@ -13,6 +13,9 @@ import {
 } from "lucide-react";
 import { visaData, rankByNetSavings, VisaCountry } from "@/app/lib/visaData";
 
+const currentMonth = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(new Date());
+const currentYear = new Date().getFullYear();
+
 // ─── HELPERS ──────────────────────────────────────────────────────────────────
 function fmt(n: number) {
   return new Intl.NumberFormat("en-US", {
@@ -89,7 +92,7 @@ function GlobalTaxIndex({ income, search }: { income: number; search: string }) 
                   <p className="text-xs text-zinc-600 truncate">{country.region}</p>
                 </div>
                 {country.trending && (
-                  <span className="flex items-center gap-0.5 text-[10px] text-emerald-400 bg-emerald-500/10 px-0.5 py-0.25 rounded-full shrink-0">
+                  <span className="hidden sm:flex items-center gap-0.5 text-[10px] text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded-full whitespace-nowrap">
                     <TrendingUp size={6} />
                     {country.searchVelocity}%
                   </span>
@@ -182,7 +185,7 @@ export default function LandingPage() {
             <a href="/" className="text-sm font-bold tracking-tight text-white group">
               NOMAD<span className="text-blue-400 group-hover:text-blue-300 transition-colors">TAX</span>
             </a>
-            <span className="text-xs text-zinc-700 font-mono ml-1">2026</span>
+            <span className="text-xs text-zinc-700 font-mono ml-1">{currentYear}</span>
           </div>
           <div className="hidden sm:flex items-center gap-6">
             <a href="/compare/spain-vs-portugal" className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors">
@@ -254,22 +257,21 @@ export default function LandingPage() {
             <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 mb-8">
               <Zap size={12} className="text-blue-400" />
               <span className="text-xs font-medium text-blue-300">
-                Updated April 2026 · Digital Nomad Visa Requirements for {visaData.length} Countries
+                Updated {currentMonth} {currentYear} · Digital Nomad Visa Requirements for {visaData.length} Countries
               </span>
             </div>
 
             {/* H1 is essential for SEO */}
             <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-white leading-[1.1] mb-6">
-              Optimize your 2026
+              Digital Nomad Visa Index 2026:
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                tax residency strategy
+                Compare Tax & Income Requirements
               </span>
             </h1>
 
             <p className="text-lg text-zinc-400 max-w-xl mx-auto leading-relaxed mb-10">
-              Stop guessing on residency. Use mathematical transparency for 2026 digital nomad visa decisions. 
-              Real-time calculations for income, tax rates, and document requirements.
+              Compare digital nomad tax rates, minimum income requirements, and residency paths with mathematical transparency. Get real-time {currentYear} data on visa processing times and required documents for {visaData.length} top-tier destinations.
             </p>
 
             {/* Search bar */}
@@ -316,7 +318,7 @@ export default function LandingPage() {
         <section id="index" aria-labelledby="index-heading">
           <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-8 gap-4">
             <div>
-              <h2 id="index-heading" className="text-2xl font-bold text-white">2026 Global Tax Index</h2>
+              <h2 id="index-heading" className="text-2xl font-bold text-white">{currentYear} Global Tax Index</h2>
               <p className="text-sm text-zinc-500 mt-1">
                 Top countries ranked by net monthly savings for your income level
               </p>
@@ -383,7 +385,7 @@ export default function LandingPage() {
           aria-labelledby="compare-heading"
         >
           <h3 id="compare-heading" className="text-2xl font-bold text-white mb-2">
-            Compare 2026 Nomad Visas Side-by-Side
+            Compare {currentYear} Nomad Visas Side-by-Side
           </h3>
           <p className="text-sm text-zinc-500 mb-8 max-w-lg mx-auto">
             Deep-dive comparison tool including tax calculators, document vaults, 

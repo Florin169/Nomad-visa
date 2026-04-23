@@ -64,7 +64,7 @@ function MetricCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, delay }}
       className={`
-        rounded-xl border p-4 flex flex-col gap-1
+        rounded-xl border p-3 flex flex-col gap-1
         ${accent
           ? "bg-blue-500/10 border-blue-500/30"
           : negative
@@ -74,18 +74,23 @@ function MetricCard({
       `}
       aria-label={`${label}: ${value}`}
     >
-      <span className="text-xs font-medium text-zinc-400 uppercase tracking-wider">
+      {/* 1. Changed text-xs to text-[10px] */}
+      <span className="text-[10px] font-medium text-zinc-400 uppercase tracking-wider">
         {label}
       </span>
+      
+      {/* 2. Changed text-2xl to text-lg (This is the main fix for the big numbers) */}
       <span
-        className={`text-2xl font-semibold tabular-nums tracking-tight
+        className={`text-lg font-semibold tabular-nums tracking-tight
           ${accent ? "text-blue-400" : negative ? "text-red-400" : "text-white"}
         `}
       >
         {value}
       </span>
+      
+      {/* 3. Changed text-xs to text-[9px] */}
       {sub && (
-        <span className="text-xs text-zinc-500">{sub}</span>
+        <span className="text-[9px] text-zinc-500 leading-tight">{sub}</span>
       )}
     </motion.div>
   );
