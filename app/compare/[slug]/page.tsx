@@ -7,33 +7,70 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const parsed = parseCompareSlug(slug);
 
-  if (!parsed) return { title: "Compare Digital Nomad Visas" };
+  if (!parsed) return { title: "Compare Digital Nomad Visas | NomadTax Index" };
 
   const [idA, idB] = parsed;
   const countryA = getCountryById(idA);
   const countryB = getCountryById(idB);
 
-  if (!countryA || !countryB) return { title: "Comparison Not Found" };
+  if (!countryA || !countryB) return { title: "Comparison Not Found | NomadTax Index" };
 
-  // SEO-optimized title for "vs" search intent
-  const title = `${countryA.name} vs ${countryB.name} Digital Nomad Visa: 2026 Comparison`;
+  // SEO-optimized title using high-intent keywords (Compare, 2026, Tax)
+  const title = `${countryA.name} vs ${countryB.name} Digital Nomad Visa: 2026 Tax & Income Comparison`;
   
-  // Detailed description to capture long-tail keywords like taxes, income requirements, and savings
-  const description = `Compare ${countryA.name} and ${countryB.name} digital nomad visas side-by-side. See differences in income requirements (${countryA.minIncome}/mo vs ${countryB.minIncome}/mo), tax rates, and potential monthly savings.`;
+  // Description optimized for CTR (Click-Through Rate) by showing raw data immediately
+  const description = `Side-by-side comparison: ${countryA.name} (${(countryA.taxRate * 100).toFixed(0)}% tax) vs ${countryB.name} (${(countryB.taxRate * 100).toFixed(0)}% tax). Compare income requirements ($${countryA.minIncome}/mo vs $${countryB.minIncome}/mo) and residency paths.`;
+
+  const url = `https://nomadtaxindex.com/compare/${slug}`;
 
   return {
     title,
     description,
+    alternates: {
+      canonical: url,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
     openGraph: {
       title,
       description,
-      type: "website",
+      url,
+      siteName: "NomadTax Index",
+      locale: "en_US",
+      type: "article", // Changed to article for better social card depth
+      images: [
+        {
+          url: "/og-image.png", // This pulls your custom 1200x630 AI billboard
+          width: 1200,
+          height: 630,
+          alt: `${countryA.name} vs ${countryB.name} comparison`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      creator: "@nomadtaxindex",
+      images: ["/og-image.png"],
     },
+    // Keywords help with some smaller search engines
+    keywords: [
+      `${countryA.name} nomad visa`,
+      `${countryB.name} nomad visa`,
+      "digital nomad tax comparison",
+      "0% tax countries 2026",
+      "nomad visa requirements",
+    ],
   };
 }
 
@@ -72,12 +109,15 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6">
-      {/* Dynamic SEO Heading - Hidden from UI, visible to crawlers */}
+    <>
+      {/* Semantic SEO Heading: 
+          Invisible in UI but provides an H1 to crawlers which is mandatory 
+          for a "Perfect" accessibility/SEO score.
+      */}
       <h1 className="sr-only">
-        Comparing Digital Nomad Visas: {countryA.name} vs {countryB.name} (2026 Guide)
+        {countryA.name} vs {countryB.name}: Digital Nomad Visa Comparison Guide (2026)
       </h1>
       <CompareClient countryA={countryA} countryB={countryB} />
-    </div>
+    </>
   );
 }

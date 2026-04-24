@@ -75,13 +75,13 @@ function MetricCard({
       aria-label={`${label}: ${value}`}
     >
       {/* 1. Changed text-xs to text-[10px] */}
-      <span className="text-[10px] font-medium text-zinc-400 uppercase tracking-wider">
+      <span className="text-[9px] font-medium text-zinc-400 uppercase tracking-wider">
         {label}
       </span>
       
       {/* 2. Changed text-2xl to text-lg (This is the main fix for the big numbers) */}
       <span
-        className={`text-lg font-semibold tabular-nums tracking-tight
+        className={`text-base md:text-lg font-semibold tabular-nums tracking-tight
           ${accent ? "text-blue-400" : negative ? "text-red-400" : "text-white"}
         `}
       >

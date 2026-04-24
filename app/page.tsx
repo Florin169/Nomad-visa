@@ -277,7 +277,7 @@ export default function LandingPage() {
               </span>
             </h1>
 
-            <p className="text-lg text-zinc-400 max-w-xl mx-auto leading-relaxed mb-10">
+            <p className="text-base text-zinc-400 max-w-xl mx-auto leading-relaxed mb-10">
               Compare digital nomad tax rates, minimum income requirements, and residency paths with mathematical transparency. Get real-time {currentYear} data on visa processing times and required documents for {visaData.length} top-tier destinations.
             </p>
 

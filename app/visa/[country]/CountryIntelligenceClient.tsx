@@ -62,7 +62,7 @@ export default function CountryIntelligenceClient({ country }: { country: VisaCo
                 <div className="flex items-center gap-3 mb-1">
                   <h1 className="text-3xl font-bold text-white">{country.name}</h1>
                   {country.trending && (
-                    <span className="flex items-center gap-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+                    <span className="flex items-center gap-1 text-[10px] md:text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
                       <TrendingUp size={11} />
                       +{country.searchVelocity}% search velocity
                     </span>
