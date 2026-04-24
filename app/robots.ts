@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"], // Protect your data endpoints
     },
-    sitemap: "https://nomadtax.io/sitemap.xml",
+    sitemap: "https://www.nomadtaxindex.com/sitemap.xml",
   };
 }
