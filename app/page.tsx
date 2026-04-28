@@ -36,8 +36,8 @@ function GlobalTaxIndex({ income, search }: { income: number; search: string }) 
 
   return (
     <div className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950">
-      {/* Table header - Semantic Header for Table */}
-      <div className="grid grid-cols-[40px_1fr_100px_100px_100px_120px] gap-0 px-4 sm:px-5 py-3 border-b border-zinc-800 bg-zinc-900/50 overflow-x-auto">
+      {/* Table header - desktop only */}
+      <div className="hidden sm:grid grid-cols-[40px_1fr_100px_100px_100px_120px] gap-0 px-5 py-3 border-b border-zinc-800 bg-zinc-900/50">
         {["#", "Country", "Tax Rate", "Living Cost", "Min. Income", "Net Savings/mo"].map(
           (h, i) => (
             <span
@@ -53,13 +53,13 @@ function GlobalTaxIndex({ income, search }: { income: number; search: string }) 
       </div>
 
       {/* Rows */}
-      <div className="divide-y divide-zinc-800/60 overflow-x-auto">
+      <div className="divide-y divide-zinc-800/60">
         {filtered.map(({ country, savings }, i) => {
           const isTop = i === 0 && !search;
           const qualifies = savings.qualifies;
           const positive = savings.monthlySavings > 0;
-          
-          const originalRank = ranked.findIndex(r => r.country.id === country.id) + 1;
+
+          const originalRank = ranked.findIndex((r) => r.country.id === country.id) + 1;
 
           return (
             <motion.a
@@ -70,82 +70,174 @@ function GlobalTaxIndex({ income, search }: { income: number; search: string }) 
               transition={{ delay: i * 0.04, duration: 0.3 }}
               title={`View 2026 tax and visa details for ${country.name}`}
               className={`
-                grid grid-cols-[40px_1fr_100px_100px_100px_120px] gap-0 px-4 sm:px-5 py-4 items-center
-                hover:bg-zinc-900/60 transition-colors group cursor-pointer
+                block px-4 py-4 hover:bg-zinc-900/60 transition-colors group cursor-pointer
+                sm:grid sm:grid-cols-[40px_1fr_100px_100px_100px_120px] sm:gap-0 sm:px-5 sm:py-4 sm:items-center
                 ${isTop ? "bg-blue-500/5" : ""}
               `}
             >
-              {/* Rank */}
-              <span
-                className={`text-sm font-bold tabular-nums ${
-                  isTop ? "text-blue-400" : "text-zinc-600"
-                }`}
-              >
-                {originalRank}
-              </span>
+              {/* Mobile layout */}
+              <div className="sm:hidden space-y-3">
+                {/* Top row */}
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <span
+                      className={`text-sm font-bold tabular-nums ${
+                        isTop ? "text-blue-400" : "text-zinc-600"
+                      }`}
+                    >
+                      #{originalRank}
+                    </span>
 
-              {/* Country */}
-              <div className="flex items-center gap-3 min-w-0">
-                <span className="text-xl" role="img" aria-label={`${country.name} flag`}>{country.flag}</span>
-                <div className="min-w-0">
-                  <p className="text-sm font-medium text-white truncate">{country.name}</p>
-                  <p className="text-xs text-zinc-600 truncate">{country.region}</p>
+                    <span className="text-xl" role="img" aria-label={`${country.name} flag`}>
+                      {country.flag}
+                    </span>
+
+                    <div className="min-w-0">
+                      <p className="text-sm font-medium text-white truncate">{country.name}</p>
+                      <p className="text-xs text-zinc-600 truncate">{country.region}</p>
+                    </div>
+                  </div>
+
+                  <ArrowRight
+                    size={14}
+                    className="mt-1 shrink-0 text-zinc-700 group-hover:text-zinc-500 transition-colors"
+                  />
                 </div>
+
+                {/* Trending */}
                 {country.trending && (
-                  <span className="hidden sm:flex items-center gap-0.5 text-[10px] text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded-full whitespace-nowrap">
-                    <TrendingUp size={6} />
-                    {country.searchVelocity}%
-                  </span>
+                  <div>
+                    <span className="inline-flex items-center gap-1 text-[10px] text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded-full whitespace-nowrap">
+                      <TrendingUp size={8} />
+                      {country.searchVelocity}%
+                    </span>
+                  </div>
                 )}
+
+                {/* Stats */}
+                <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                  <div className="flex justify-between gap-2">
+                    <span className="text-zinc-500">Tax Rate</span>
+                    <span
+                      className={`font-medium tabular-nums ${
+                        country.taxRate === 0
+                          ? "text-emerald-400"
+                          : country.taxRate > 0.3
+                          ? "text-red-400"
+                          : "text-zinc-300"
+                      }`}
+                    >
+                      {(country.taxRate * 100).toFixed(0)}%
+                    </span>
+                  </div>
+
+                  <div className="flex justify-between gap-2">
+                    <span className="text-zinc-500">Living Cost</span>
+                    <span className="text-zinc-400 tabular-nums">{fmt(country.avgLivingCost)}</span>
+                  </div>
+
+                  <div className="flex justify-between gap-2">
+                    <span className="text-zinc-500">Min. Income</span>
+                    <span className="text-zinc-500 tabular-nums">{fmt(country.minIncome)}</span>
+                  </div>
+
+                  <div className="flex justify-between gap-2">
+                    <span className="text-zinc-500">Net Savings</span>
+                    {!qualifies ? (
+                      <span className="text-xs text-zinc-600 bg-zinc-800 px-2 py-1 rounded-lg">
+                        Below min.
+                      </span>
+                    ) : (
+                      <span
+                        className={`font-semibold tabular-nums ${
+                          positive ? "text-emerald-400" : "text-red-400"
+                        }`}
+                      >
+                        {positive ? "+" : ""}
+                        {fmt(savings.monthlySavings)}
+                      </span>
+                    )}
+                  </div>
+                </div>
               </div>
 
-              {/* Tax Rate */}
-              <span
-                className={`text-sm text-right font-medium tabular-nums ${
-                  country.taxRate === 0
-                    ? "text-emerald-400"
-                    : country.taxRate > 0.3
-                    ? "text-red-400"
-                    : "text-zinc-300"
-                }`}
-              >
-                {(country.taxRate * 100).toFixed(0)}%
-              </span>
+              {/* Desktop layout */}
+              <>
+                {/* Rank */}
+                <span
+                  className={`hidden sm:block text-sm font-bold tabular-nums ${
+                    isTop ? "text-blue-400" : "text-zinc-600"
+                  }`}
+                >
+                  {originalRank}
+                </span>
 
-              {/* Living Cost */}
-              <span className="text-sm text-right text-zinc-400 tabular-nums">
-                {fmt(country.avgLivingCost)}
-              </span>
-
-              {/* Min Income */}
-              <span className="text-sm text-right text-zinc-500 tabular-nums">
-                {fmt(country.minIncome)}
-              </span>
-
-              {/* Net Savings */}
-              <div className="flex items-center justify-end gap-2">
-                {!qualifies ? (
-                  <span className="text-xs text-zinc-600 bg-zinc-800 px-2 py-1 rounded-lg">
-                    Below min.
+                {/* Country */}
+                <div className="hidden sm:flex items-center gap-3 min-w-0">
+                  <span className="text-xl" role="img" aria-label={`${country.name} flag`}>
+                    {country.flag}
                   </span>
-                ) : (
-                  <span
-                    className={`text-sm font-semibold tabular-nums ${
-                      positive ? "text-emerald-400" : "text-red-400"
-                    }`}
-                  >
-                    {positive ? "+" : ""}
-                    {fmt(savings.monthlySavings)}
-                  </span>
-                )}
-                <ArrowRight
-                  size={14}
-                  className="text-zinc-700 group-hover:text-zinc-500 transition-colors"
-                />
-              </div>
+                  <div className="min-w-0">
+                    <p className="text-sm font-medium text-white truncate">{country.name}</p>
+                    <p className="text-xs text-zinc-600 truncate">{country.region}</p>
+                  </div>
+                  {country.trending && (
+                    <span className="hidden sm:flex items-center gap-0.5 text-[10px] text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded-full whitespace-nowrap">
+                      <TrendingUp size={6} />
+                      {country.searchVelocity}%
+                    </span>
+                  )}
+                </div>
+
+                {/* Tax Rate */}
+                <span
+                  className={`hidden sm:block text-sm text-right font-medium tabular-nums ${
+                    country.taxRate === 0
+                      ? "text-emerald-400"
+                      : country.taxRate > 0.3
+                      ? "text-red-400"
+                      : "text-zinc-300"
+                  }`}
+                >
+                  {(country.taxRate * 100).toFixed(0)}%
+                </span>
+
+                {/* Living Cost */}
+                <span className="hidden sm:block text-sm text-right text-zinc-400 tabular-nums">
+                  {fmt(country.avgLivingCost)}
+                </span>
+
+                {/* Min Income */}
+                <span className="hidden sm:block text-sm text-right text-zinc-500 tabular-nums">
+                  {fmt(country.minIncome)}
+                </span>
+
+                {/* Net Savings */}
+                <div className="hidden sm:flex items-center justify-end gap-2">
+                  {!qualifies ? (
+                    <span className="text-xs text-zinc-600 bg-zinc-800 px-2 py-1 rounded-lg">
+                      Below min.
+                    </span>
+                  ) : (
+                    <span
+                      className={`text-sm font-semibold tabular-nums ${
+                        positive ? "text-emerald-400" : "text-red-400"
+                      }`}
+                    >
+                      {positive ? "+" : ""}
+                      {fmt(savings.monthlySavings)}
+                    </span>
+                  )}
+                  <ArrowRight
+                    size={14}
+                    className="text-zinc-700 group-hover:text-zinc-500 transition-colors"
+                  />
+                </div>
+              </>
             </motion.a>
           );
         })}
+
         {filtered.length === 0 && (
           <div className="py-12 text-center">
             <p className="text-zinc-500 text-sm">No countries matching "{search}"</p>
