@@ -442,6 +442,29 @@ export default function NomadCalculator({
               </div>
             </article>
 
+            <div className="mt-8 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 text-center relative overflow-hidden">
+  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent pointer-events-none" />
+  
+  <div className="relative z-10">
+    <p className="text-xs font-medium tracking-widest text-emerald-400/80 uppercase mb-2">
+      Next Step
+    </p>
+    <h3 className="text-base font-semibold text-white mb-1">
+      Need help with the application?
+    </h3>
+    <p className="text-sm text-white/40 mb-5">
+      Connect with a vetted local expert to handle your visa and tax filing.
+    </p>
+    
+      <a href="https://tally.so/r/LZvO42" rel="nofollow noopener" target="_blank"
+      className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 hover:border-emerald-500/60 text-emerald-400 text-sm font-medium transition-all duration-200"
+    >
+      Connect with {country.name} Specialist
+      <span>&#8594;</span>
+    </a>
+  </div>
+</div>
+
             {/* Visa fee note */}
             <p className="text-xs text-zinc-600 mt-3 text-center">
               One-time government visa fee: {formatCurrency(country.visaFee)} · Min. income requirement:{" "}
