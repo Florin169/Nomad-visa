@@ -339,12 +339,12 @@ export default function DocumentVault({ country }: DocumentVaultProps) {
       {/* Header */}
       <div className="flex items-start justify-between mb-6">
         <div>
-          <h3 className="text-base font-semibold text-white flex items-center gap-2">
+          <h2 className="text-base font-semibold text-white flex items-center gap-2">
             <Briefcase size={16} className="text-blue-400" aria-hidden="true" />
-            Document Vault
-          </h3>
+            {country.name} Digital Nomad Visa Required Documents Checklists
+          </h2>
           <p className="text-xs text-zinc-500 mt-0.5">
-            {country.name} · {docs.length} required documents · ~{totalDays} days to gather
+            Official verification files needed for the 2026 {country.visaType} application layout.
           </p>
         </div>
         {checked.size > 0 && (

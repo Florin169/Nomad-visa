@@ -162,16 +162,21 @@ export default function CountryIntelligenceClient({ country }: { country: VisaCo
 
         {/* Tab panels */}
         <motion.div
-          key={tab}
           id={`${tab}-panel`}
           role="tabpanel"
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2 }}
         >
-          {tab === "calculator" && <NomadCalculator country={country} />}
-          {tab === "documents" && <DocumentVault country={country} />}
-          {tab === "roadmap" && <ResidencyRoadmap country={country} />}
+          <div className={tab === "calculator" ? "block" : "hidden"}>
+            <NomadCalculator country={country} />
+          </div>
+          <div className={tab === "documents" ? "block" : "hidden"}>
+            <DocumentVault country={country} />
+          </div>
+          <div className={tab === "roadmap" ? "block" : "hidden"}>
+            <ResidencyRoadmap country={country} />
+          </div>
         </motion.div>
 
         {/* Compare CTAs - Semantic Sidebar for Internal Linking */}

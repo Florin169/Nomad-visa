@@ -24,15 +24,12 @@ export default function ResidencyRoadmap({ country }: ResidencyRoadmapProps) {
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h3 className="text-base font-semibold text-white flex items-center gap-2">
+          <h2 className="text-base font-semibold text-white flex items-center gap-2">
             <MapPin size={16} className="text-blue-400" aria-hidden="true" />
-            Residency Roadmap
-          </h3>
+            Official {country.name} Remote Work Residency Roadmap
+          </h2>
           <p className="text-xs text-zinc-500 mt-0.5">
-            {country.name} · {country.roadmap.length} stages
-            {country.pathToCitizenship && country.citizenshipYears && (
-              <> · Citizenship eligible in {country.citizenshipYears} years</>
-            )}
+            {country.name} · {country.roadmap.length} distinct application phases
           </p>
         </div>
         {country.pathToCitizenship ? (

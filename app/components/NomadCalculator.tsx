@@ -442,6 +442,11 @@ export default function NomadCalculator({
               </div>
             </article>
 
+            <div className="mt-6 border-t border-zinc-800/60 pt-6 text-sm text-zinc-400 leading-relaxed">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-500 mb-2">2026 Tax Policy Breakdown for {country.name} Nomads</h3>
+              <p>Under current 2026 regulatory framework stipulations, the {country.name} {country.visaType} features a localized core tax requirement baseline calculation of <strong className="text-emerald-400">{(country.taxRate * 100).toFixed(0)}%</strong>. By shifting operations to this jurisdiction on a monthly base salary calculation input, your calculated net overhead costs drop significantly compared to standard high-tax domestic environments.</p>
+            </div>
+
             <div className="mt-8 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 text-center relative overflow-hidden">
   <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent pointer-events-none" />
   
