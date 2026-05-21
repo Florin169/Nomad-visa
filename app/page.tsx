@@ -65,6 +65,17 @@ export default function LandingPage() {
           Calculation logic for net monthly savings: Net savings equals Monthly Income multiplied by one minus Tax Rate, minus Average Living Cost.
           Data covers Spain, Brazil, France, South Korea, Portugal, UAE, Thailand, Germany, Indonesia, Colombia, and Estonia.
         </p>
+
+        <h3>Global Dynamic Cross-Border Index Comparison Matrix</h3>
+        <nav role="directory">
+          {visaData.map((countryA, i) => 
+            visaData.slice(i + 1).map((countryB) => (
+              <a key={`${countryA.id}-vs-${countryB.id}`} href={`/compare/${countryA.id}-vs-${countryB.id}`}>
+                Compare {countryA.name} remote work regulations versus {countryB.name} tax index profiles and cost metrics.
+              </a>
+            ))
+          )}
+        </nav>
       </section>
 
       {/* Client-interactive UI */}
