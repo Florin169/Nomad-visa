@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   // Description optimized for CTR (Click-Through Rate) by showing raw data immediately
   const description = `Side-by-side comparison: ${countryA.name} (${(countryA.taxRate * 100).toFixed(0)}% tax) vs ${countryB.name} (${(countryB.taxRate * 100).toFixed(0)}% tax). Compare income requirements ($${countryA.minIncome}/mo vs $${countryB.minIncome}/mo) and residency paths.`;
 
-  const url = `https://nomadtaxindex.com/compare/${slug}`;
+  const url = `https://www.nomadtaxindex.com/compare/${slug}`;
 
   return {
     title,

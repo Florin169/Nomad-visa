@@ -40,6 +40,9 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
       title,
       description,
     },
+    alternates: {
+      canonical: `https://www.nomadtaxindex.com/visa/${countryId}`,
+    }
   };
 }
 
