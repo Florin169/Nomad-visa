@@ -1,5 +1,7 @@
 import { parseCompareSlug, getCountryById, visaData } from "@/app/lib/visaData";
+import { compareFaqs } from "@/app/lib/faqData";
 import CompareClient from "./CompareClient";
+import CompareFaq from "./CompareFaq";
 import { Metadata } from "next";
 
 // ─── SEO METADATA GENERATION ──────────────────────────────────────────────────
@@ -21,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   // Description optimized for CTR (Click-Through Rate) by showing raw data immediately
   const description = `Side-by-side comparison: ${countryA.name} (${(countryA.taxRate * 100).toFixed(0)}% tax) vs ${countryB.name} (${(countryB.taxRate * 100).toFixed(0)}% tax). Compare income requirements ($${countryA.minIncome}/mo vs $${countryB.minIncome}/mo) and residency paths.`;
 
-  const url = `https://www.nomadtaxindex.com/compare/${slug}`;
+  const url = `https://nomadtaxindex.com/compare/${slug}`;
 
   return {
     title,
@@ -108,16 +110,41 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
     );
   }
 
+  const faqs = compareFaqs[slug] ?? [];
+
+  const faqJsonLd = faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(({ q, a }) => ({
+      "@type": "Question",
+      "name": q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": a,
+      },
+    })),
+  } : null;
+
   return (
     <>
-      {/* Semantic SEO Heading: 
-          Invisible in UI but provides an H1 to crawlers which is mandatory 
-          for a "Perfect" accessibility/SEO score.
-      */}
       <h1 className="sr-only">
         {countryA.name} vs {countryB.name}: Digital Nomad Visa Comparison Guide (2026)
       </h1>
+
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
+
       <CompareClient countryA={countryA} countryB={countryB} />
+
+      <CompareFaq
+        faqs={faqs}
+        countryAName={countryA.name}
+        countryBName={countryB.name}
+      />
     </>
   );
 }

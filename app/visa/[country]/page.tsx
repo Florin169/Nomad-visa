@@ -1,5 +1,8 @@
 import { visaData, getCountryById } from "@/app/lib/visaData";
+import { titleOverrides, descriptionOverrides } from "@/app/lib/metaOverrides";
+import { countryFaqs } from "@/app/lib/faqData";
 import CountryIntelligenceClient from "./CountryIntelligenceClient";
+import CountryFaq from "./CountryFaq";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
@@ -17,8 +20,13 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
 
   if (!country) return { title: "Country Not Found | NomadTaxIndex" };
 
-  const title = `${country.name} Digital Nomad Visa 2026: Tax Calculator & Requirements`;
-  const description = `Calculate your net savings in ${country.name} with the ${country.visaType}. Features 2026 tax rates (${(country.taxRate * 100).toFixed(0)}%), $${country.minIncome}/mo minimum income checks, and full document checklist.`;
+  const title =
+    titleOverrides[countryId] ??
+    `${country.name} Digital Nomad Visa 2026: Tax Calculator & Requirements`;
+
+  const description =
+    descriptionOverrides[countryId] ??
+    `Calculate your net savings in ${country.name} with the ${country.visaType}. Features 2026 tax rates (${(country.taxRate * 100).toFixed(0)}%), $${country.minIncome}/mo minimum income checks, and full document checklist.`;
 
   return {
     title,
@@ -75,6 +83,21 @@ export default async function CountryPage({ params }: { params: Promise<{ countr
     ]
   };
 
+  // 2. FAQ JSON-LD Schema
+  const faqs = countryFaqs[countryId] ?? [];
+  const faqJsonLd = faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(({ q, a }) => ({
+      "@type": "Question",
+      "name": q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": a,
+      },
+    })),
+  } : null;
+
   return (
     <>
       {/* Inject Structured Data into the Head */}
@@ -82,6 +105,12 @@ export default async function CountryPage({ params }: { params: Promise<{ countr
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       
       <main className="min-h-screen bg-zinc-950">
         {/* Hidden H1 for SEO - Ensures Google knows the primary topic even if the UI uses fancy headings */}
@@ -101,6 +130,7 @@ export default async function CountryPage({ params }: { params: Promise<{ countr
 
           {/* The Dashboard UI */}
           <CountryIntelligenceClient country={country} />
+          <CountryFaq faqs={faqs} countryName={country.name} />
         </div>
 
         {/* Semantic Footer for Country Pages */}
