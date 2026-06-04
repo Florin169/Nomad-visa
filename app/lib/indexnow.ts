@@ -1,5 +1,5 @@
 const INDEXNOW_KEY = "64b9d6bab8b4467d8bdaaf37235be472";
-const HOST = "www.nomadtaxindex.com";
+const HOST = "nomadtaxindex.com";
 const INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow";
 
 export const ALL_URLS: string[] = [
