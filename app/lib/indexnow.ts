@@ -1,4 +1,4 @@
-const INDEXNOW_KEY = "64b9d6bab8b4467d8bdaaf37235be472";
+const INDEXNOW_KEY = "a30f385350c648119d9bc6f32b17d676";
 const HOST = "nomadtaxindex.com";
 const INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow";
 
