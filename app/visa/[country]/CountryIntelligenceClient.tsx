@@ -60,7 +60,12 @@ export default function CountryIntelligenceClient({ country }: { country: VisaCo
               <span className="text-4xl sm:text-6xl" role="img" aria-label={`${country.name} flag`}>{country.flag}</span>
               <div>
                 <div className="flex items-center gap-3 mb-1">
-                  <h1 className="text-3xl font-bold text-white">{country.name}</h1>
+                  <h1 className="text-3xl font-bold text-white">
+                    {country.name}
+                    <span className="block text-base font-normal text-zinc-400 mt-1">
+                      {country.visaType}
+                    </span>
+                  </h1>
                   {country.trending && (
                     <span className="flex items-center gap-1 text-[10px] md:text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
                       <TrendingUp size={11} />
@@ -68,7 +73,6 @@ export default function CountryIntelligenceClient({ country }: { country: VisaCo
                     </span>
                   )}
                 </div>
-                <p className="text-sm text-zinc-400">{country.visaType}</p>
                 <div className="flex items-center gap-4 mt-2">
                   <span className="flex items-center gap-1.5 text-xs text-zinc-500">
                     <Globe size={11} />
@@ -137,6 +141,7 @@ export default function CountryIntelligenceClient({ country }: { country: VisaCo
           {tabs.map((t) => (
             <button
               key={t.id}
+              id={`tab-${t.id}`}
               role="tab"
               aria-selected={tab === t.id}
               aria-controls={`${t.id}-panel`}
@@ -160,24 +165,59 @@ export default function CountryIntelligenceClient({ country }: { country: VisaCo
           ))}
         </div>
 
-        {/* Tab panels */}
-        <motion.div
-          id={`${tab}-panel`}
-          role="tabpanel"
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.2 }}
-        >
-          <div className={tab === "calculator" ? "block" : "hidden"}>
+        {/* Tab panels — use visibility instead of display:none so Google crawls all content */}
+        <div>
+          <motion.div
+            id="calculator-panel"
+            role="tabpanel"
+            aria-labelledby="tab-calculator"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: tab === "calculator" ? 1 : 0 }}
+            style={{
+              position: tab === "calculator" ? "relative" : "absolute",
+              visibility: tab === "calculator" ? "visible" : "hidden",
+              height: tab === "calculator" ? "auto" : 0,
+              overflow: "hidden",
+              pointerEvents: tab === "calculator" ? "auto" : "none",
+            }}
+          >
             <NomadCalculator country={country} />
-          </div>
-          <div className={tab === "documents" ? "block" : "hidden"}>
+          </motion.div>
+
+          <motion.div
+            id="documents-panel"
+            role="tabpanel"
+            aria-labelledby="tab-documents"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: tab === "documents" ? 1 : 0 }}
+            style={{
+              position: tab === "documents" ? "relative" : "absolute",
+              visibility: tab === "documents" ? "visible" : "hidden",
+              height: tab === "documents" ? "auto" : 0,
+              overflow: "hidden",
+              pointerEvents: tab === "documents" ? "auto" : "none",
+            }}
+          >
             <DocumentVault country={country} />
-          </div>
-          <div className={tab === "roadmap" ? "block" : "hidden"}>
+          </motion.div>
+
+          <motion.div
+            id="roadmap-panel"
+            role="tabpanel"
+            aria-labelledby="tab-roadmap"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: tab === "roadmap" ? 1 : 0 }}
+            style={{
+              position: tab === "roadmap" ? "relative" : "absolute",
+              visibility: tab === "roadmap" ? "visible" : "hidden",
+              height: tab === "roadmap" ? "auto" : 0,
+              overflow: "hidden",
+              pointerEvents: tab === "roadmap" ? "auto" : "none",
+            }}
+          >
             <ResidencyRoadmap country={country} />
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
 
         {/* Compare CTAs - Semantic Sidebar for Internal Linking */}
         <aside className="mt-8 flex flex-wrap gap-2 sm:gap-3" aria-labelledby="compare-title">

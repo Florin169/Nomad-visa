@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   // Description optimized for CTR (Click-Through Rate) by showing raw data immediately
   const description = `Side-by-side comparison: ${countryA.name} (${(countryA.taxRate * 100).toFixed(0)}% tax) vs ${countryB.name} (${(countryB.taxRate * 100).toFixed(0)}% tax). Compare income requirements ($${countryA.minIncome}/mo vs $${countryB.minIncome}/mo) and residency paths.`;
 
-  const url = `https://nomadtaxindex.com/compare/${slug}`;
+  const url = `https://www.nomadtaxindex.com/compare/${slug}`;
 
   return {
     title,
@@ -145,6 +145,26 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
         countryAName={countryA.name}
         countryBName={countryB.name}
       />
+
+      <nav
+        className="max-w-6xl mx-auto px-4 sm:px-6 pb-12 flex flex-col sm:flex-row gap-3"
+        aria-label="View individual country details"
+      >
+        <a
+          href={`/visa/${countryA.id}`}
+          className="flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 transition-all rounded-xl px-4 py-3 text-sm text-zinc-400 hover:text-zinc-200"
+        >
+          <span>{countryA.flag}</span>
+          <span>View full {countryA.name} details →</span>
+        </a>
+        <a
+          href={`/visa/${countryB.id}`}
+          className="flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 transition-all rounded-xl px-4 py-3 text-sm text-zinc-400 hover:text-zinc-200"
+        >
+          <span>{countryB.flag}</span>
+          <span>View full {countryB.name} details →</span>
+        </a>
+      </nav>
     </>
   );
 }

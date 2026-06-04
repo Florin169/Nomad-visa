@@ -71,10 +71,17 @@ export default function LandingPage() {
           {visaData.map((countryA, i) => 
             visaData.slice(i + 1).map((countryB) => (
               <a key={`${countryA.id}-vs-${countryB.id}`} href={`/compare/${countryA.id}-vs-${countryB.id}`}>
-                Compare {countryA.name} remote work regulations versus {countryB.name} tax index profiles and cost metrics.
+                {countryA.name} vs {countryB.name} digital nomad visa comparison
               </a>
             ))
           )}
+        </nav>
+        <nav aria-label="Country visa pages">
+          {visaData.map((country) => (
+            <a key={country.id} href={`/visa/${country.id}`}>
+              {country.name} digital nomad visa — {country.visaType}
+            </a>
+          ))}
         </nav>
       </section>
 

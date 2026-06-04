@@ -289,13 +289,18 @@ export default function CompareClient({ countryA, countryB }: CompareClientProps
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-24 space-y-8">
 
+        {/* Visible H2 for Google — styled to blend with page context */}
+        <h2 className="text-center text-sm font-medium text-zinc-500 -mb-4">
+          {countryA.name} vs {countryB.name} — Digital Nomad Visa Comparison 2026
+        </h2>
+
         {/* ── Hero: flags + pickers ── */}
         <div className="flex items-center gap-3 sm:gap-8">
           <div className="flex-1 flex flex-col items-center gap-2 min-w-0">
             <span className="text-4xl sm:text-6xl">{countryA.flag}</span>
-            <h1 className="text-sm sm:text-xl font-bold text-white truncate max-w-full px-1">
+            <p className="text-sm sm:text-xl font-bold text-white truncate max-w-full px-1">
               {countryA.name}
-            </h1>
+            </p>
             <CountryPicker
               selected={countryA}
               exclude={countryB.id}
@@ -309,9 +314,9 @@ export default function CompareClient({ countryA, countryB }: CompareClientProps
 
           <div className="flex-1 flex flex-col items-center gap-2 min-w-0">
             <span className="text-4xl sm:text-6xl">{countryB.flag}</span>
-            <h1 className="text-sm sm:text-xl font-bold text-white truncate max-w-full px-1">
+            <p className="text-sm sm:text-xl font-bold text-white truncate max-w-full px-1">
               {countryB.name}
-            </h1>
+            </p>
             <CountryPicker
               selected={countryB}
               exclude={countryA.id}

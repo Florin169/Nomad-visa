@@ -85,6 +85,32 @@ export default async function CountryPage({ params }: { params: Promise<{ countr
 
   // 2. FAQ JSON-LD Schema
   const faqs = countryFaqs[countryId] ?? [];
+  // 3. BreadcrumbList JSON-LD Schema
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.nomadtaxindex.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Visa Index",
+        "item": "https://www.nomadtaxindex.com/#index"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": `${country.name} Digital Nomad Visa`,
+        "item": `https://www.nomadtaxindex.com/visa/${countryId}`
+      }
+    ]
+  };
+
   const faqJsonLd = faqs.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -104,6 +130,10 @@ export default async function CountryPage({ params }: { params: Promise<{ countr
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       {faqJsonLd && (
         <script

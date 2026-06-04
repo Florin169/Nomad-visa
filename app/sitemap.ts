@@ -7,7 +7,7 @@ import { MetadataRoute } from "next";
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   // 1. UPDATED DOMAIN: Using your live Spaceship domain
-  const baseUrl = "https://nomadtaxindex.com"; 
+  const baseUrl = "https://www.nomadtaxindex.com"; 
 
   // 2. CORE STATIC PAGES
   const staticUrls = [
