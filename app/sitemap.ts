@@ -1,4 +1,5 @@
 import { visaData } from "@/app/lib/visaData";
+import { guidesData } from "@/app/lib/guidesData";
 import { MetadataRoute } from "next";
 
 /**
@@ -48,6 +49,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // 5. Combine everything into one massive index
-  return [...staticUrls, ...countryUrls, ...comparisonUrls];
+  // 5. GUIDE PAGES
+  const guideUrls: MetadataRoute.Sitemap = guidesData.map((guide) => ({
+    url: `${baseUrl}/guides/${guide.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  // 6. Combine everything into one massive index
+  return [...staticUrls, ...countryUrls, ...comparisonUrls, ...guideUrls];
 }
