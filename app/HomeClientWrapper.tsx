@@ -13,6 +13,14 @@ import {
 } from "lucide-react";
 import { rankByNetSavings, VisaCountry } from "@/app/lib/visaData";
 
+const GUIDES = [
+  { slug: "spain-digital-nomad-visa-tax-rate-2026", label: "Spain Tax Rate & Beckham Law" },
+  { slug: "portugal-digital-nomad-tax-calculator-2026", label: "Portugal NHR 2.0 Tax Calculator" },
+  { slug: "spain-vs-portugal-digital-nomad-tax-2026", label: "Spain vs Portugal Tax 2026" },
+  { slug: "move-from-uae-to-thailand-2026", label: "Move from UAE to Thailand" },
+  { slug: "does-france-have-a-digital-nomad-visa", label: "Does France Have a Nomad Visa?" },
+];
+
 const currentMonth = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(new Date());
 const currentYear = new Date().getFullYear();
 
@@ -258,6 +266,8 @@ export default function HomeClientWrapper({ initialCountries }: HomeClientWrappe
   const [searchQuery, setSearchQuery] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
+  const [isGuidesOpen, setIsGuidesOpen] = useState(false);
+  const [isMobileGuidesOpen, setIsMobileGuidesOpen] = useState(false);
 
   return (
     <>
@@ -280,6 +290,45 @@ export default function HomeClientWrapper({ initialCountries }: HomeClientWrappe
             <a href="#index" className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors">
               Index
             </a>
+
+            {/* Guides dropdown */}
+            <div className="relative" onMouseEnter={() => setIsGuidesOpen(true)} onMouseLeave={() => setIsGuidesOpen(false)}>
+              <button className="flex items-center gap-1 text-sm text-zinc-500 hover:text-zinc-300 transition-colors">
+                Guides
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={`h-3 w-3 transition-transform duration-200 ${isGuidesOpen ? "rotate-180" : ""}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {isGuidesOpen && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50">
+                  <div className="bg-zinc-900 border border-zinc-800 rounded-xl shadow-xl shadow-black/40 overflow-hidden w-72">
+                    <div className="px-4 py-2.5 border-b border-zinc-800">
+                      <p className="text-xs text-zinc-500 uppercase tracking-wider font-medium">2026 Tax Guides</p>
+                    </div>
+                    {GUIDES.map((guide) => (
+                      <a
+                        key={guide.slug}
+                        href={`/guides/${guide.slug}`}
+                        className="flex items-center justify-between px-4 py-3 hover:bg-zinc-800/60 transition-colors border-b border-zinc-800/60 last:border-0"
+                      >
+                        <span className="text-sm text-zinc-300 hover:text-white transition-colors leading-snug">
+                          {guide.label}
+                        </span>
+                        <span className="text-zinc-600 text-xs shrink-0 ml-3">→</span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
             <button
               onClick={() => setShowSearch(true)}
               className="text-sm bg-blue-500 hover:bg-blue-400 transition-colors text-white px-4 py-1.5 rounded-lg font-medium"
@@ -321,12 +370,57 @@ export default function HomeClientWrapper({ initialCountries }: HomeClientWrappe
             </button>
           </div>
           <div className="px-4 pt-4 pb-8">
-            <a href="/compare/spain-vs-portugal" className="block text-sm text-zinc-500 hover:text-zinc-300 transition-colors py-3 border-b border-zinc-900">
+            <a
+              href="/compare/spain-vs-portugal"
+              className="block text-sm text-zinc-500 hover:text-zinc-300 transition-colors py-3 border-b border-zinc-900"
+            >
               Compare Countries
             </a>
-            <a href="#index" onClick={() => setIsMenuOpen(false)} className="block text-sm text-zinc-500 hover:text-zinc-300 transition-colors py-3 border-b border-zinc-900">
+            <a
+              href="#index"
+              onClick={() => setIsMenuOpen(false)}
+              className="block text-sm text-zinc-500 hover:text-zinc-300 transition-colors py-3 border-b border-zinc-900"
+            >
               Tax Index
             </a>
+
+            {/* Guides expandable section */}
+            <div className="border-b border-zinc-900">
+              <button
+                onClick={() => setIsMobileGuidesOpen(!isMobileGuidesOpen)}
+                className="w-full flex items-center justify-between text-sm text-zinc-500 hover:text-zinc-300 transition-colors py-3"
+              >
+                <span>Guides</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={`h-3.5 w-3.5 transition-transform duration-200 ${isMobileGuidesOpen ? "rotate-180" : ""}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {isMobileGuidesOpen && (
+                <div className="pb-3 space-y-1">
+                  {GUIDES.map((guide) => (
+                    <a
+                      key={guide.slug}
+                      href={`/guides/${guide.slug}`}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-zinc-900 transition-colors"
+                    >
+                      <span className="text-blue-400 text-xs shrink-0">→</span>
+                      <span className="text-sm text-zinc-400 hover:text-zinc-200 transition-colors leading-snug">
+                        {guide.label}
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <button
               onClick={() => setShowSearch(true)}
               className="w-full text-sm bg-blue-500 hover:bg-blue-400 transition-colors text-white px-4 py-3 rounded-lg font-medium mt-6"
