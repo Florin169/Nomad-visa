@@ -1,4 +1,4 @@
-const INDEXNOW_KEY = "9efd90c86cc74f31a846074217d62073";
+const INDEXNOW_KEY = "64b9d6bab8b4467d8bdaaf37235be472";
 const HOST = "www.nomadtaxindex.com";
 const INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow";
 
@@ -76,6 +76,7 @@ export const ALL_URLS: string[] = [
   "https://www.nomadtaxindex.com/guides/portugal-digital-nomad-tax-calculator-2026",
   "https://www.nomadtaxindex.com/guides/does-france-have-a-digital-nomad-visa",
   "https://www.nomadtaxindex.com/guides/spain-vs-portugal-digital-nomad-tax-2026",
+  "https://www.nomadtaxindex.com/guides/digital-nomad-visa-spain-tax-2026",
 ];
 
 export async function submitToIndexNow(urls: string[]): Promise<boolean> {

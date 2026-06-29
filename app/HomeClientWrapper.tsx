@@ -19,6 +19,7 @@ const GUIDES = [
   { slug: "spain-vs-portugal-digital-nomad-tax-2026", label: "Spain vs Portugal Tax 2026" },
   { slug: "move-from-uae-to-thailand-2026", label: "Move from UAE to Thailand" },
   { slug: "does-france-have-a-digital-nomad-visa", label: "Does France Have a Nomad Visa?" },
+  { slug: "digital-nomad-visa-spain-tax-2026", label: "Spain Digital Nomad Visa Tax — Full Guide" },
 ];
 
 const currentMonth = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(new Date());

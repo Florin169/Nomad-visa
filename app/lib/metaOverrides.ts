@@ -5,7 +5,7 @@
 
 export const titleOverrides: Record<string, string> = {
   spain:
-    "Spain Digital Nomad Tax Calculator 2026 — Beckham Law Savings",
+    "Spain Digital Nomad Visa Tax 2026 — Beckham Law Calculator & Requirements",
   portugal:
     "Portugal Digital Nomad Tax Calculator 2026 — NHR 2.0 Rate",
   uae:
@@ -30,7 +30,7 @@ export const titleOverrides: Record<string, string> = {
 
 export const descriptionOverrides: Record<string, string> = {
   spain:
-    "Calculate your net monthly savings in Spain under the Beckham Law — flat 24% tax for 6 years. Check the €2,646/mo income requirement and full document checklist for 2026.",
+    "Spain's Digital Nomad Visa applies a flat 24% Beckham Law tax for 6 years. Check the €2,646/mo income requirement, calculate your exact net savings, and get the full 2026 document checklist.",
   portugal:
     "Portugal's NHR 2.0 offers a 20% flat tax for 10 years. Calculate your savings, check the €3,480/mo income threshold, and get the full D8 visa document checklist for 2026.",
   uae:

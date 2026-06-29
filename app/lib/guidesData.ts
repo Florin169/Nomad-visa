@@ -490,6 +490,94 @@ export const guidesData: GuideDefinition[] = [
     disclaimer: "Data reflects 2026 Spain Digital Nomad Visa (Ley de Startups) and Portugal D8 Digital Nomad Visa legislative frameworks. Always verify with qualified local tax advisors before making residency decisions. NomadTaxIndex is an intelligence tool, not a legal or tax service.",
     relatedGuides: ["spain-digital-nomad-visa-tax-rate-2026", "portugal-digital-nomad-tax-calculator-2026", "does-france-have-a-digital-nomad-visa"],
   },
+
+  // ─── GUIDE 6 ────────────────────────────────────────────────────────────────
+  {
+    slug: "digital-nomad-visa-spain-tax-2026",
+    countryId: "spain",
+    metaTitle: "Digital Nomad Visa Spain Tax 2026 — Complete Guide (Beckham Law, Rates & Rules)",
+    metaDescription: "Spain's Digital Nomad Visa taxes remote workers at a flat 24% Beckham Law rate instead of the standard 47% progressive system. Here's every Spain DNV tax rule US nomads need to know for 2026.",
+    primaryKeyword: "digital nomad visa spain tax",
+    h1: "Digital Nomad Visa Spain Tax 2026: The Complete Guide for US Remote Workers",
+    intro: "Spain's Digital Nomad Visa (Ley de Startups) comes with one of Europe's most favorable tax structures for foreign remote workers — a flat 24% Beckham Law rate replacing Spain's standard progressive income tax (IRPF) that reaches 47%. But the Spain digital nomad visa tax system has rules, deadlines, and exceptions that trip up most applicants. This guide covers every tax rule US nomads need to understand before applying.",
+    sections: [
+      {
+        heading: "What Taxes Apply to Spain's Digital Nomad Visa?",
+        content: "Spain's DNV holders are subject to three potential tax categories.\n\nIncome Tax (IRPF / Beckham Law): The primary tax for DNV holders. Standard Spanish tax residents pay progressive IRPF rates from 19% to 47%. DNV holders who apply for the Beckham Law regime pay a flat 24% on income up to €600,000/year instead. Above €600,000/year the rate is 47%.\n\nSocial Security Contributions: Employees whose foreign employer voluntarily registers with the Spanish Social Security system may pay contributions. Most US remote workers on employment contracts are exempt through the US-Spain totalization agreement. Freelancers who register as Autónomos in Spain pay monthly social security contributions — typically €200–€300/month in year one. Many DNV holders avoid this by maintaining their foreign employment or contractor status.\n\nVAT (IVA): Only applies if you provide services to Spanish clients. Remote workers earning from non-Spanish sources do not collect or remit Spanish VAT.",
+      },
+      {
+        heading: "The Beckham Law: How Spain's DNV Tax Rate Actually Works",
+        content: "The Beckham Law (Régimen Especial para Trabajadores Desplazados) is the tax regime that makes Spain's DNV financially viable. Under it, income from foreign employers and clients is fully exempt from Spanish tax. Income from Spanish clients (up to 20% of total income) is taxed at 24% flat. Capital gains and dividends from foreign assets are exempt. Spanish-sourced capital gains are taxed at standard rates (19–28%). Foreign wealth is exempt — no Modelo 720 declaration required.\n\nThe 20% rule: Under DNV terms, no more than 20% of your total annual income can come from Spanish sources. If you exceed this, your visa status is at risk and the Beckham Law may no longer apply.\n\nFor most US freelancers and remote employees earning from US clients or a US employer, the effective Spanish income tax rate under the Beckham Law is close to 0% — you pay 24% only on any Spanish-sourced portion of income, which for most US nomads is zero.",
+      },
+      {
+        heading: "Spain Digital Nomad Visa Tax: Employee vs Freelancer",
+        content: "The Beckham Law applies to both employees and freelancers on the DNV, but the structure differs.\n\nEmployees (W-2 equivalent): Your foreign employer pays you as normal. Spain taxes only the Spanish-sourced portion of your salary at 24%. If your employer is entirely US-based and you have no Spanish clients, your effective Spanish income tax rate is 0%.\n\nFreelancers (1099 / Self-employed): You can access the Beckham Law as a freelancer under the DNV if your work qualifies as innovative activity or serves clients outside Spain. The 24% flat rate applies to your Spanish-sourced freelance income. Income from US or other non-Spanish clients is exempt. However, if you register as an Autónomo in Spain, social security contributions apply on top. Many freelancers on the DNV avoid Autónomo registration by maintaining their US business entity.",
+      },
+      {
+        heading: "How Spain DNV Taxes Compare to Other European Nomad Destinations",
+        table: {
+          headers: ["Country", "Tax Regime", "Rate", "Foreign Income"],
+          rows: [
+            ["Spain DNV", "Beckham Law", "24% flat", "Exempt"],
+            ["Portugal D8", "NHR 2.0", "20% flat", "Mostly exempt"],
+            ["Estonia DNV", "Flat income tax", "20% flat", "Taxable"],
+            ["Germany Freelancer", "Progressive IRPF", "30–38% effective", "Taxable"],
+            ["France Talent Passport", "Progressive", "30–45% effective", "Taxable"],
+          ],
+        },
+        content: "Spain's 24% is higher than Portugal's 20% NHR 2.0, but both exempt foreign income — making the effective rate for US nomads with foreign clients comparable in practice. The difference shows up on Spanish-sourced income, where Spain charges 24% vs Portugal's 20%.",
+      },
+      {
+        heading: "The Modelo 149 Deadline — The Most Dangerous Spain Tax Rule",
+        content: "This is the rule that costs applicants the most money when missed.\n\nThe Beckham Law does not activate automatically when you receive your DNV. You must file Modelo 149 with the Agencia Tributaria within 6 calendar months of the date you register with Spanish Social Security (Seguridad Social).\n\nWhat happens if you miss it: Your application for the Beckham Law is permanently rejected. You cannot reapply. You default to Spain's standard progressive IRPF rates (19–47%) for your entire Spanish residency — potentially costing tens of thousands of dollars in additional tax.\n\nThe filing process: First, register with Social Security within 30 days of starting activities in Spain. Second, count 6 months from your Social Security registration date — this is your hard deadline. Third, file Modelo 149 electronically through the AEAT (Agencia Estatal de Administración Tributaria) portal. Fourth, receive confirmation of Beckham Law status — typically 4–8 weeks after filing.\n\nMost US applicants hire a Spanish gestor (tax administrator) specifically to manage this deadline. Professional fees for Modelo 149 filing typically run €300–€800.",
+      },
+      {
+        heading: "Does Spain Double Tax US Citizens?",
+        content: "No — but the interaction between US and Spanish tax obligations requires careful management.\n\nThe US-Spain Tax Treaty (in force since 1990) prevents double taxation on most income types. Foreign income exempt under the Beckham Law is not taxed in Spain — you report it on your US return but do not pay Spanish tax on it. The Foreign Earned Income Exclusion (FEIE) lets US citizens exclude up to $132,900 (2026) of foreign-earned income from US income tax if they meet the bona fide residence or physical presence test in Spain. The Foreign Tax Credit (FTC) allows you to credit Spanish taxes paid against your US tax liability, preventing double taxation on income taxed in both countries. US Social Security taxes continue to apply — the US-Spain totalization agreement covers Social Security, meaning you pay into one system (typically US) but not both.\n\nPractical example: A US freelancer earning $8,000/month entirely from US clients, living in Barcelona on a DNV — Spanish income tax is €0 (all income foreign-sourced, exempt under Beckham Law). US income tax is offset significantly by the FEIE exclusion. Effective combined tax rate: potentially very low depending on income level. Always work with a dual-qualified US-Spain tax advisor for your specific situation.",
+      },
+      {
+        heading: "Spain Digital Nomad Visa Tax After Year 6",
+        content: "The Beckham Law applies for a maximum of 6 tax years from the year you become a Spanish tax resident (the year you first register with Social Security counts as year 1).\n\nAfter year 6, you transition to Spain's standard progressive IRPF system: income up to €12,450 is taxed at 19%, €12,451–€20,200 at 24%, €20,201–€35,200 at 30%, €35,201–€60,000 at 37%, €60,001–€300,000 at 45%, and above €300,000 at 47%.\n\nAt $8,000/month ($96,000/year), your effective IRPF rate after year 6 would be approximately 37–40% — significantly higher than the 24% Beckham Law rate. Most nomads plan their exit strategy before year 6 ends, commonly transitioning to Portugal's NHR 2.0 regime (20% flat for 10 years) to reset their flat-rate clock.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Do I pay taxes in Spain on my digital nomad visa?",
+        a: "It depends on where your income comes from. Under the Beckham Law, income from non-Spanish clients and employers is exempt from Spanish tax. If 100% of your income comes from foreign sources, your effective Spanish income tax is 0%. You pay 24% only on income from Spanish clients, capped at 20% of total income under DNV rules.",
+      },
+      {
+        q: "What is the Spain digital nomad visa income tax rate?",
+        a: "The Beckham Law applies a flat 24% on Spanish-sourced income up to €600,000/year. Foreign-sourced income is exempt. Without the Beckham Law, Spain's progressive IRPF reaches 47% at higher income levels.",
+      },
+      {
+        q: "How do I apply for the Beckham Law tax regime on the Spain DNV?",
+        a: "File Modelo 149 with the Agencia Tributaria within 6 months of registering with Spanish Social Security. This is mandatory — the regime does not activate automatically. Late filing results in permanent rejection with no appeals process.",
+      },
+      {
+        q: "Can US freelancers get the Beckham Law tax rate in Spain?",
+        a: "Yes, if your freelance activity qualifies as innovative or you primarily serve non-Spanish clients. The 24% flat rate applies to your Spanish-sourced income. Income from US or other foreign clients remains exempt. Consult a Spanish tax advisor to confirm your specific activity qualifies.",
+      },
+      {
+        q: "What taxes do I pay as a Spain digital nomad if all my clients are in the US?",
+        a: "Under the Beckham Law: effectively 0% in Spain on your US client income. You still file and potentially pay US taxes, offset by the FEIE ($132,900 exclusion in 2026) or Foreign Tax Credit. No Spanish VAT on US-sourced services. No Spanish Social Security if you maintain your US employment or LLC structure.",
+      },
+      {
+        q: "How long does the Spain digital nomad visa flat tax rate last?",
+        a: "6 tax years from the year you become a Spanish tax resident. After year 6, standard progressive IRPF rates apply (up to 47%). Most nomads plan to transition to another low-tax jurisdiction — commonly Portugal's NHR 2.0 — before this deadline.",
+      },
+    ],
+    ctas: [
+      { label: "Calculate your exact net savings in Spain", href: "/visa/spain" },
+      { label: "Compare Spain taxes vs Portugal NHR 2.0", href: "/compare/spain-vs-portugal" },
+      { label: "Full Spain Beckham Law rate breakdown", href: "/guides/spain-digital-nomad-visa-tax-rate-2026" },
+    ],
+    disclaimer: "Data reflects 2026 Spain Digital Nomad Visa (Ley de Startups) and Beckham Law (Régimen Especial para Trabajadores Desplazados) legislative framework. Tax rules are subject to change — always verify with a licensed Spanish tax advisor or gestor before filing. NomadTaxIndex is an intelligence tool, not a legal or tax service.",
+    relatedGuides: [
+      "spain-digital-nomad-visa-tax-rate-2026",
+      "spain-vs-portugal-digital-nomad-tax-2026",
+      "portugal-digital-nomad-tax-calculator-2026",
+    ],
+  },
 ];
 
 export function getGuideBySlug(slug: string): GuideDefinition | undefined {
