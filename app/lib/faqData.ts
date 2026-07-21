@@ -336,39 +336,43 @@ export const compareFaqs: Record<string, CompareFaq[]> = {
 
   "spain-vs-france": [
     {
-      q: "Spain vs France — which nomad visa is easier to get?",
-      a: "Spain is significantly easier. France's Talent Passport requires a Master's degree or 5+ years professional experience, a detailed business plan, and proof of €30,000 in investment funds. Spain's DNV requires only proof of €2,646/month income and standard documents. Spain also processes faster (3–6 months vs France's 6–10 weeks, but France's requirements are harder to meet in the first place).",
+      q: "Spain vs France — which digital nomad visa is easier to get?",
+      a: "Spain is significantly easier. Spain's Digital Nomad Visa (Ley de Startups) requires proof of €2,646/month income and standard documents — no qualifications needed. France's Talent Passport requires a Master's degree or 5+ years of professional experience, a detailed business plan, and €30,000 in project financing. Spain also processes faster: 3–6 months vs France's 6–10 weeks, though France's requirements are harder to meet in the first place.",
     },
     {
-      q: "Is Spain or France cheaper for digital nomads?",
-      a: "Spain is cheaper. Average monthly living costs: Spain €1,800 vs France €2,100. Spain's major nomad hubs (Barcelona, Madrid, Valencia) are 15–25% cheaper than Paris for equivalent quality of life. Outside of Paris, France's costs drop, but Spain consistently outperforms on cost across all cities.",
+      q: "Spain vs France — which has lower income tax for digital nomads?",
+      a: "Spain is dramatically lower. Spain's Beckham Law applies a flat 24% rate on Spanish-sourced income for 6 years, with foreign income fully exempt. France has no equivalent flat-rate nomad regime — remote workers on the Talent Passport pay progressive income tax up to 45% plus social contributions, with effective rates typically landing at 30–45%. At $5,000/month, Spain saves you $2,000/month vs France's $1,400/month after tax and living costs.",
     },
     {
-      q: "Spain vs France — which has lower income tax?",
-      a: "Spain is dramatically lower. Spain's Beckham Law offers a flat 24% for 6 years. France has no equivalent flat-rate nomad regime — freelancers pay progressive income tax up to 42% plus social contributions, with effective rates typically landing at 30–45%. For tax efficiency, Spain wins decisively.",
+      q: "Spain vs France — which is cheaper to live in?",
+      a: "Spain is cheaper. Average monthly living costs for a digital nomad: Spain $1,800 vs France $2,100. Spain's major nomad hubs (Barcelona, Madrid, Valencia, Málaga) are 15–25% cheaper than Paris for equivalent quality of life. Outside Paris, French costs drop, but Spain consistently outperforms on cost across all cities. At $5,000/month income, Spain's lower tax rate and lower living costs produce $600/month more in savings than France.",
     },
     {
-      q: "Which country offers faster EU citizenship — Spain or France?",
-      a: "France is faster at 5 years vs Spain's 10 years for full citizenship. However, Spain's DNV leads to permanent residency after 5 years, with citizenship possible after 10. If EU citizenship is the goal, France's 5-year path is significantly better despite its higher taxes and tougher visa requirements.",
+      q: "Does France or Spain offer faster EU citizenship for digital nomads?",
+      a: "France is significantly faster — 5 years of legal residency vs Spain's 10 years for full citizenship. Both result in an EU passport with Schengen zone rights and allow dual citizenship with the US. France requires a B1 French language test; Spain requires B1 Spanish. If an EU passport is your primary long-term goal, France's 5-year path is a major advantage despite its higher taxes and tougher visa requirements. Portugal also offers 5-year citizenship with lower taxes than both.",
+    },
+    {
+      q: "Is $5,000/month enough for Spain or France as a digital nomad?",
+      a: "Yes for Spain — comfortably. After the 24% Beckham Law flat tax ($1,200) and $1,800 living costs, you save $2,000/month. For France at $5,000/month: after approximately 30% effective tax ($1,500) and $2,100 living costs, you save $1,400/month. Spain produces $600/month more in savings at this income level. At $5,000/month you also exceed Spain's minimum income requirement ($2,646/month) with strong headroom.",
     },
   ],
 
   "france-vs-spain": [
     {
-      q: "France vs Spain — which nomad visa is easier to get?",
-      a: "Spain is significantly easier. France's Talent Passport requires a Master's degree or 5+ years professional experience, a detailed business plan, and proof of €30,000 in investment funds. Spain's DNV requires only proof of €2,646/month income and standard documents. For straightforward eligibility, Spain wins.",
+      q: "France vs Spain — which digital nomad visa is easier to get?",
+      a: "Spain is significantly easier. Spain's Digital Nomad Visa requires only proof of €2,646/month income with no qualification requirements. France's Talent Passport requires a Master's degree or 5+ years experience, a viable business plan, and €30,000 in project financing. For most US remote workers without a formal business plan, Spain is the only realistic option between these two.",
     },
     {
-      q: "Is France or Spain cheaper for digital nomads?",
-      a: "Spain is cheaper. Average monthly living costs: Spain €1,800 vs France €2,100. Spain's major nomad hubs (Barcelona, Madrid, Valencia) are 15–25% cheaper than Paris for equivalent quality of life. Outside Paris, French costs drop, but Spain consistently outperforms on cost across all major cities.",
+      q: "France vs Spain — which has lower taxes for remote workers?",
+      a: "Spain is dramatically lower. Spain's Beckham Law locks income tax at a flat 24% with foreign income exempt. France has no equivalent flat-rate regime — effective rates for Talent Passport holders typically land at 30–45% including social contributions. At $7,500/month income, Spain saves approximately $1,050/month more than France in tax alone.",
     },
     {
-      q: "France vs Spain — which has lower income tax?",
-      a: "Spain is dramatically lower. Spain's Beckham Law offers a flat 24% for 6 years. France has no equivalent flat-rate nomad regime — effective rates for freelancers typically land at 30–45% including social contributions. For tax efficiency, Spain wins decisively over France.",
+      q: "France vs Spain — which is better for US digital nomads?",
+      a: "Spain is better for most US nomads on tax efficiency and accessibility. Spain's Beckham Law produces lower taxes, the income threshold is achievable, and the visa process requires no business plan or formal qualifications. France wins only if EU citizenship in 5 years (vs Spain's 10 years) is your primary goal, or if you specifically want to live in Paris and are prepared for the Talent Passport requirements.",
     },
     {
-      q: "Which country offers faster EU citizenship — France or Spain?",
-      a: "France is faster: 5 years of legal residency vs Spain's 10 years for full citizenship (Spain's DNV gives permanent residency after 5 years, citizenship after 10). If an EU passport is your primary goal, France's 5-year path is significantly better despite higher taxes.",
+      q: "Can I move from Spain to France after the Beckham Law ends?",
+      a: "Yes — and some nomads plan this transition. After 6 years in Spain under the Beckham Law, transitioning to France resets your residency clock toward EU citizenship, though France's progressive tax rates (30–45%) would apply immediately with no flat-rate equivalent. A more common strategy is Spain for 6 years (Beckham Law) then Portugal (NHR 2.0, 20% flat for 10 years) to reset the flat-rate clock while maintaining EU residency.",
     },
   ],
 
@@ -531,6 +535,86 @@ export const compareFaqs: Record<string, CompareFaq[]> = {
     {
       q: "Thailand vs Portugal — which visa lasts longer?",
       a: "Thailand wins significantly: 10 years (5+5 renewable) vs Portugal's 1 year initial with renewals. However, Portugal's renewals lead toward permanent residency and citizenship, making it a more structured long-term path. Thailand's 10-year visa offers stability without bureaucratic renewal pressure, but it's a ceiling, not a ladder.",
+    },
+  ],
+
+  "brazil-vs-colombia": [
+    {
+      q: "Brazil vs Colombia — which digital nomad visa is easier to get?",
+      a: "Colombia is easier on every metric. Colombia's M Visa requires just $750/month income, is fully online via cancilleria.gov.co, costs $177, and processes in 2–4 weeks. Brazil's VITEM XIV requires $1,500/month income, consular in-person application in most cases, costs $150, and takes 4–8 weeks. Colombia has the lowest income threshold of any nomad visa in this index — roughly half of Brazil's requirement.",
+    },
+    {
+      q: "Brazil vs Colombia — which has lower taxes for digital nomads?",
+      a: "Colombia wins clearly. Colombia's M Visa applies 0% tax on foreign-sourced income — period. Brazil's tax situation depends on your stay length: under 183 days per year you're a non-resident and generally pay 0% on foreign income, but over 183 days you become a Brazilian tax resident subject to progressive rates up to 27.5%. Colombia's 0% rate is unconditional regardless of how long you stay.",
+    },
+    {
+      q: "Brazil vs Colombia — which is cheaper to live in?",
+      a: "Colombia is cheaper overall. Average nomad living costs: Colombia $900/month (Medellín, Bogotá) vs Brazil $1,100/month (Florianópolis, São Paulo). Both are among the most affordable destinations in this index. At $3,000/month income with 0% tax on both visas: Colombia gives you $2,100/month in savings vs Brazil's $1,900/month — a $2,400/year advantage for Colombia.",
+    },
+    {
+      q: "Is Brazil or Colombia safer for digital nomads?",
+      a: "Both countries have safety realities that depend heavily on neighborhood selection. Colombia's established nomad hubs — Medellín's El Poblado and Laureles, Bogotá's Chapinero and Usaquén — have improved dramatically and report very few incidents for nomads who stay within these zones. Brazil's safest nomad destination is Florianópolis, consistently rated the best Brazilian city for quality of life and safety. In both countries, staying within established expat zones makes the risk profile manageable.",
+    },
+    {
+      q: "Does Brazil or Colombia offer a path to citizenship?",
+      a: "Colombia does — after 5 years of continuous legal residency. Brazil technically allows naturalization after 4 years but the VITEM XIV (Digital Nomad Visa) has a maximum 2-year stay, meaning you cannot accumulate the residency time needed through this visa alone. You'd need to transition to a different Brazilian visa category for the citizenship path. Colombia's 5-year citizenship path is accessible directly through the M Visa renewal chain.",
+    },
+  ],
+
+  "colombia-vs-brazil": [
+    {
+      q: "Colombia vs Brazil — which digital nomad visa saves more money?",
+      a: "Colombia saves more at every income level. 0% tax on foreign income unconditionally, $900/month average living costs, and a $750/month income threshold. At $3,000/month: Colombia nets $2,100/month saved vs Brazil's $1,900/month. At $5,000/month: Colombia nets $4,100/month vs Brazil's $3,900/month. The $200/month advantage comes from both lower living costs and Colombia's cleaner 0% tax structure vs Brazil's 183-day residency rule.",
+    },
+    {
+      q: "Colombia vs Brazil — which visa is faster to get?",
+      a: "Colombia by a wide margin. Fully online application via cancilleria.gov.co, $177 fee, 2–4 week processing. Brazil typically requires an in-person consular visit, $150 fee, and 4–8 week processing. Colombia's M Visa is the fastest and simplest digital nomad visa in this entire index — no embassy visit, no waiting room, no in-person anything.",
+    },
+    {
+      q: "Colombia vs Brazil — best cities for digital nomads?",
+      a: "Colombia: Medellín is the standout — spring-like climate year-round (dubbed City of Eternal Spring), fast fiber internet, large established nomad community, co-working density rivals Bali, and cost of living around $800–$1,000/month for comfortable living. Bogotá is larger, more professional, and slightly cheaper. Brazil: Florianópolis offers beach lifestyle with good infrastructure, reliable internet, and strong safety relative to other Brazilian cities at around $1,000–$1,300/month.",
+    },
+    {
+      q: "Does Colombia or Brazil offer better long-term residency?",
+      a: "Colombia wins on long-term residency. The M Visa grants 2 years initially with renewals, and after 5 years of continuous residency you can apply for Colombian citizenship. Brazil's VITEM XIV has a hard 2-year maximum — you cannot renew beyond that on this visa and must switch to a different category for long-term residency. If building toward permanent residency matters, Colombia is the clearer path.",
+    },
+  ],
+
+  "spain-vs-indonesia": [
+    {
+      q: "Spain vs Indonesia — which saves more money for digital nomads?",
+      a: "Indonesia wins decisively below $8,000/month. Indonesia's Second Home Visa charges 0% tax on foreign income with $1,100/month average living costs in Bali. At $5,000/month: Indonesia nets $3,900/month saved vs Spain's $2,000/month after 24% Beckham Law tax and $1,800 living costs. The $1,900/month gap is enormous. Above $10,000+/month, Spain's EU access, professional network, and citizenship path may justify the higher tax burden.",
+    },
+    {
+      q: "Spain vs Indonesia — which visa is easier to get?",
+      a: "Spain's DNV is easier to qualify for in terms of income: €2,646/month required. Indonesia's Second Home Visa requires $130,000 USD in liquid assets — no monthly income requirement, but a high asset bar. If you have the assets, Indonesia's application is online and straightforward. If you don't have $130,000 in liquid savings, Spain is your only option between these two regardless of monthly income.",
+    },
+    {
+      q: "Spain vs Bali — which is better for digital nomads in 2026?",
+      a: "Depends entirely on what you're optimizing for. Bali (Indonesia) wins on savings, lifestyle, cost, tropical climate, and nomad community density — Canggu is arguably the world's most developed nomad hub. Spain wins on EU access, professional credibility, citizenship path (10 years), Schengen travel, and proximity to European clients and time zones. They serve completely different lifestyles: Bali for lifestyle-first nomads, Spain for career-building nomads who want long-term European roots.",
+    },
+    {
+      q: "Does Spain or Indonesia offer a path to citizenship?",
+      a: "Spain does — after 10 years of legal residency. Indonesia's Second Home Visa explicitly offers no path to permanent residency or citizenship. Indonesia makes naturalization extremely difficult for foreigners in general. If an EU passport or long-term settlement rights matter, Spain is the only choice between these two. Portugal offers a faster EU citizenship path (5 years) if citizenship timeline is your primary decision factor.",
+    },
+    {
+      q: "Can I live in Spain and Bali in the same year?",
+      a: "Not legally under either visa simultaneously — you can only be a tax resident in one country at a time. What some nomads do: spend time in Bali as a tourist (Indonesia allows 30-day visa-free entry for most nationalities, extendable to 60 days) while maintaining Spanish tax residency. However, if you spend more than 183 days outside Spain in a year you may risk your Spanish residency status. The Spain DNV and Indonesia Second Home Visa are designed for primary residency, not split-year arrangements.",
+    },
+  ],
+
+  "indonesia-vs-spain": [
+    {
+      q: "Indonesia vs Spain — which is better for US digital nomads?",
+      a: "Indonesia (Bali) wins for lifestyle and savings; Spain wins for long-term career and citizenship. Indonesia: 0% tax on foreign income, $1,100/month costs, 5-year visa, no citizenship path. Spain: 24% Beckham Law flat tax, $1,800/month costs, 10-year citizenship path, full EU access. At incomes under $8,000/month, Indonesia produces significantly more monthly savings. Above $10,000/month where EU market access and professional network matter more, Spain becomes more compelling.",
+    },
+    {
+      q: "Indonesia vs Spain — which visa lasts longer?",
+      a: "Indonesia's Second Home Visa lasts 5 years (with renewal possible for another 5 years) — the longest initial visa duration of any country in this index except Thailand's LTR. Spain's Digital Nomad Visa starts at 1 year, renewable annually, building toward permanent residency after 5 years. Indonesia offers more stability upfront; Spain offers a structured long-term residency ladder. Indonesia has zero citizenship path; Spain leads to EU citizenship after 10 years.",
+    },
+    {
+      q: "Indonesia vs Spain — which has better internet for remote work?",
+      a: "Spain is more reliable nationwide. Major Spanish cities (Madrid, Barcelona, Valencia) have consistent fiber infrastructure with average speeds of 300+ Mbps. In Bali, established nomad zones (Canggu, Ubud, Seminyak) have reliable fiber at co-working spaces (50–200 Mbps) but residential reliability varies and power outages during rainy season (November–March) can disrupt connectivity. Outside Bali's main hubs, Indonesian internet degrades significantly.",
     },
   ],
 };

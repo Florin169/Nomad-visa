@@ -161,6 +161,61 @@ export default async function CountryPage({ params }: { params: Promise<{ countr
           {/* The Dashboard UI */}
           <CountryIntelligenceClient country={country} />
           <CountryFaq faqs={faqs} countryName={country.name} />
+
+          {/* ─── CRAWLABLE DOCUMENT & ROADMAP DATA ────────────────────────────────
+              Visually hidden via sr-only but fully server-rendered and crawlable by Google.
+              This surfaces the Document Vault and Roadmap tab content — unique structured
+              data that Google cannot see when it is hidden behind client-side CSS tabs.
+          ──────────────────────────────────────────────────────────────────────── */}
+          <div className="sr-only">
+            {/* Document requirements */}
+            <section aria-label={`${country.name} Digital Nomad Visa Required Documents`}>
+              <h2>{country.name} Digital Nomad Visa Required Documents 2026</h2>
+              <p>
+                The {country.visaType} requires {country.detailedDocs.length} documents
+                for a complete application. Minimum income requirement: ${country.minIncome}/month.
+                One-time government visa fee: ${country.visaFee}.
+              </p>
+              <ul>
+                {country.detailedDocs.map((doc) => (
+                  <li key={doc.id}>
+                    <strong>{doc.title}</strong> ({doc.category}, {doc.difficulty} difficulty,
+                    approximately {doc.estimatedDays} days to obtain):
+                    {" "}{doc.description}
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            {/* Residency roadmap */}
+            <section aria-label={`${country.name} Digital Nomad Visa Application Roadmap`}>
+              <h2>{country.name} Digital Nomad Visa Application Process 2026</h2>
+              <p>
+                The {country.visaType} application has {country.roadmap.length} stages.
+                {country.pathToCitizenship
+                  ? ` Path to citizenship available after ${country.citizenshipYears} years.`
+                  : " No direct citizenship path through this visa."}
+              </p>
+              <ol>
+                {country.roadmap.map((stage) => (
+                  <li key={stage.stage}>
+                    <strong>Stage {stage.stage}: {stage.title}</strong> — {stage.duration}.
+                    {" "}{stage.description}
+                    {stage.milestones.length > 0 && (
+                      <>
+                        {" "}Key milestones:{" "}
+                        <ul>
+                          {stage.milestones.map((milestone, i) => (
+                            <li key={i}>{milestone}</li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </section>
+          </div>
         </div>
 
         {/* Semantic Footer for Country Pages */}
