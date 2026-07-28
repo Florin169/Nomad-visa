@@ -165,6 +165,47 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
           <span>View full {countryB.name} details →</span>
         </a>
       </nav>
+
+      {/* Related comparisons — internal links to other compare pages featuring these two countries */}
+      {(() => {
+        const related = visaData
+          .filter((c) => c.id !== countryA.id && c.id !== countryB.id)
+          .slice(0, 6)
+          .map((c) => ({
+            labelA: `${countryA.name} vs ${c.name}`,
+            hrefA: `/compare/${countryA.id}-vs-${c.id}`,
+            labelB: `${countryB.name} vs ${c.name}`,
+            hrefB: `/compare/${countryB.id}-vs-${c.id}`,
+          }));
+
+        return (
+          <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-12">
+            <h2 className="text-sm font-medium text-zinc-500 uppercase tracking-wider mb-4">
+              Related comparisons
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {related.map((r, i) => (
+                <div key={i} className="flex flex-col gap-2">
+                  <a
+                    href={r.hrefA}
+                    className="text-sm text-zinc-400 hover:text-zinc-200 bg-zinc-900/40 hover:bg-zinc-900 border border-zinc-800/60 hover:border-zinc-700 transition-all rounded-lg px-4 py-2.5 flex items-center justify-between"
+                  >
+                    <span>{r.labelA}</span>
+                    <span className="text-zinc-600 text-xs">→</span>
+                  </a>
+                  <a
+                    href={r.hrefB}
+                    className="text-sm text-zinc-400 hover:text-zinc-200 bg-zinc-900/40 hover:bg-zinc-900 border border-zinc-800/60 hover:border-zinc-700 transition-all rounded-lg px-4 py-2.5 flex items-center justify-between"
+                  >
+                    <span>{r.labelB}</span>
+                    <span className="text-zinc-600 text-xs">→</span>
+                  </a>
+                </div>
+              ))}
+            </div>
+          </section>
+        );
+      })()}
     </>
   );
 }

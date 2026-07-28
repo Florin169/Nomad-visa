@@ -5,7 +5,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowLeft, TrendingUp, Shield, Clock, Globe, Share2 } from "lucide-react";
+import { TrendingUp, Shield, Clock, Globe } from "lucide-react";
 import { VisaCountry, visaData } from "@/app/lib/visaData";
 import NomadCalculator from "@/app/components/NomadCalculator";
 import DocumentVault from "@/app/components/DocumentVault";
@@ -24,30 +24,6 @@ export default function CountryIntelligenceClient({ country }: { country: VisaCo
 
   return (
     <main className="min-h-screen bg-zinc-950 text-white pb-24">
-      {/* Nav */}
-      <nav className="sticky top-0 z-40 border-b border-zinc-800/80 bg-zinc-950/90 backdrop-blur-md" aria-label="Main Navigation">
-        <div className="max-w-5xl mx-auto px-6 sm:px-8 h-16 sm:h-14 flex items-center justify-between">
-          <a
-            href="/"
-            className="flex items-center gap-3 text-sm text-zinc-500 hover:text-zinc-300 transition-colors"
-            title="Return to Global Tax Index"
-          >
-            <ArrowLeft size={15} />
-            Back
-          </a>
-          <div className="text-sm font-bold text-white">
-            NOMAD<span className="text-blue-400">TAX INDEX</span>
-          </div>
-          <button 
-            className="flex items-center gap-2 text-sm text-zinc-500 hover:text-zinc-300 transition-colors"
-            aria-label="Share this visa intelligence report"
-          >
-            <Share2 size={14} />
-            Share
-          </button>
-        </div>
-      </nav>
-
       <div className="max-w-5xl mx-auto px-6 sm:px-8 pt-6 sm:pt-8">
         {/* Hero header - Semantic Article for Main Topic */}
         <motion.article
@@ -224,7 +200,6 @@ export default function CountryIntelligenceClient({ country }: { country: VisaCo
           <h2 id="compare-title" className="sr-only">Compare with other countries</h2>
           {visaData
             .filter((c) => c.id !== country.id)
-            .slice(0, 4)
             .map((other) => (
               <a
                 key={other.id}

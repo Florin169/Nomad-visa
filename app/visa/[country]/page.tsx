@@ -2,9 +2,11 @@ import { visaData, getCountryById } from "@/app/lib/visaData";
 import { titleOverrides, descriptionOverrides } from "@/app/lib/metaOverrides";
 import { countryFaqs } from "@/app/lib/faqData";
 import CountryIntelligenceClient from "./CountryIntelligenceClient";
+import CountryNarrative from "./CountryNarrative";
 import CountryFaq from "./CountryFaq";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
+import { ArrowLeft, Share2 } from "lucide-react";
 
 // ─── GENERATE STATIC PATHS ──────────────────────────────────────────────────
 // This ensures all country pages are pre-rendered at build time for max speed.
@@ -143,6 +145,30 @@ export default async function CountryPage({ params }: { params: Promise<{ countr
       )}
       
       <main className="min-h-screen bg-zinc-950">
+        {/* Main Navigation — sticky top bar */}
+        <nav className="sticky top-0 z-40 border-b border-zinc-800/80 bg-zinc-950/90 backdrop-blur-md" aria-label="Main Navigation">
+          <div className="max-w-5xl mx-auto px-6 sm:px-8 h-16 sm:h-14 flex items-center justify-between">
+            <a
+              href="/"
+              className="flex items-center gap-3 text-sm text-zinc-500 hover:text-zinc-300 transition-colors"
+              title="Return to Global Tax Index"
+            >
+              <ArrowLeft size={15} />
+              Back
+            </a>
+            <div className="text-sm font-bold text-white">
+              NOMAD<span className="text-blue-400">TAX INDEX</span>
+            </div>
+            <button
+              className="flex items-center gap-2 text-sm text-zinc-500 hover:text-zinc-300 transition-colors"
+              aria-label="Share this visa intelligence report"
+            >
+              <Share2 size={14} />
+              Share
+            </button>
+          </div>
+        </nav>
+
         {/* Hidden H1 for SEO - Ensures Google knows the primary topic even if the UI uses fancy headings */}
         <h1 className="sr-only">
           {country.name} Digital Nomad Visa 2026 — Tax, Savings, and Requirements
@@ -158,9 +184,59 @@ export default async function CountryPage({ params }: { params: Promise<{ countr
             <span className="text-zinc-300">{country.name}</span>
           </nav>
 
+          {/* Editorial narrative + calculator context — server-rendered for Google */}
+          <CountryNarrative country={country} />
+
           {/* The Dashboard UI */}
           <CountryIntelligenceClient country={country} />
           <CountryFaq faqs={faqs} countryName={country.name} />
+
+          {/* Related guides — server-rendered links to guide pages for this country */}
+          {(() => {
+            const guideLinks: Record<string, { label: string; slug: string }[]> = {
+              spain: [
+                { label: "Spain Digital Nomad Visa Tax 2026 — Complete Guide", slug: "digital-nomad-visa-spain-tax-2026" },
+                { label: "Spain Digital Nomad Visa Tax Rate — Beckham Law Breakdown", slug: "spain-digital-nomad-visa-tax-rate-2026" },
+                { label: "Spain vs Portugal Digital Nomad Tax 2026", slug: "spain-vs-portugal-digital-nomad-tax-2026" },
+              ],
+              portugal: [
+                { label: "Portugal Digital Nomad Tax Calculator 2026 — NHR 2.0", slug: "portugal-digital-nomad-tax-calculator-2026" },
+                { label: "Spain vs Portugal Digital Nomad Tax 2026", slug: "spain-vs-portugal-digital-nomad-tax-2026" },
+              ],
+              france: [
+                { label: "Does France Have a Digital Nomad Visa? (2026 Answer)", slug: "does-france-have-a-digital-nomad-visa" },
+              ],
+              thailand: [
+                { label: "Move from UAE to Thailand — Tax & Visa Guide 2026", slug: "move-from-uae-to-thailand-2026" },
+              ],
+              uae: [
+                { label: "Move from UAE to Thailand — Tax & Visa Guide 2026", slug: "move-from-uae-to-thailand-2026" },
+              ],
+            };
+
+            const guides = guideLinks[countryId] ?? [];
+            if (guides.length === 0) return null;
+
+            return (
+              <div className="mt-8 mb-4">
+                <h2 className="text-sm font-medium text-zinc-500 uppercase tracking-wider mb-3">
+                  Related guides
+                </h2>
+                <div className="flex flex-col gap-2">
+                  {guides.map((guide) => (
+                    <a
+                      key={guide.slug}
+                      href={`/guides/${guide.slug}`}
+                      className="flex items-center justify-between bg-zinc-900/40 hover:bg-zinc-900 border border-zinc-800/60 hover:border-zinc-700 transition-all rounded-xl px-4 py-3"
+                    >
+                      <span className="text-sm text-zinc-300">{guide.label}</span>
+                      <span className="text-zinc-600 text-xs shrink-0 ml-3">→</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
 
           {/* ─── CRAWLABLE DOCUMENT & ROADMAP DATA ────────────────────────────────
               Visually hidden via sr-only but fully server-rendered and crawlable by Google.

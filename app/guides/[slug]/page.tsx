@@ -338,6 +338,64 @@ export default async function GuidePage({
                   );
                 })}
               </div>
+
+              {/* Additional compare links for guides */}
+              {(() => {
+                const compareLinks: Record<string, { label: string; href: string }[]> = {
+                  "digital-nomad-visa-spain-tax-2026": [
+                    { label: "Spain vs Portugal — side by side", href: "/compare/spain-vs-portugal" },
+                    { label: "Spain vs France — tax comparison", href: "/compare/spain-vs-france" },
+                    { label: "Spain vs Indonesia — savings comparison", href: "/compare/spain-vs-indonesia" },
+                  ],
+                  "spain-digital-nomad-visa-tax-rate-2026": [
+                    { label: "Spain vs Portugal — tax rate comparison", href: "/compare/spain-vs-portugal" },
+                    { label: "Spain vs Estonia — flat tax comparison", href: "/compare/spain-vs-estonia" },
+                  ],
+                  "portugal-digital-nomad-tax-calculator-2026": [
+                    { label: "Portugal vs Spain — NHR 2.0 vs Beckham Law", href: "/compare/portugal-vs-spain" },
+                    { label: "Portugal vs Thailand — savings comparison", href: "/compare/portugal-vs-thailand" },
+                    { label: "Portugal vs France — citizenship path", href: "/compare/portugal-vs-france" },
+                  ],
+                  "spain-vs-portugal-digital-nomad-tax-2026": [
+                    { label: "Spain vs France — tax comparison", href: "/compare/spain-vs-france" },
+                    { label: "Portugal vs Thailand — savings", href: "/compare/portugal-vs-thailand" },
+                    { label: "Spain vs Indonesia — lifestyle vs career", href: "/compare/spain-vs-indonesia" },
+                  ],
+                  "move-from-uae-to-thailand-2026": [
+                    { label: "UAE vs Thailand — full calculator comparison", href: "/compare/uae-vs-thailand" },
+                    { label: "UAE vs Spain — tax comparison", href: "/compare/uae-vs-spain" },
+                    { label: "Thailand vs Portugal — citizenship vs savings", href: "/compare/thailand-vs-portugal" },
+                  ],
+                  "does-france-have-a-digital-nomad-visa": [
+                    { label: "France vs Spain — visa comparison", href: "/compare/france-vs-spain" },
+                    { label: "France vs Portugal — citizenship path", href: "/compare/france-vs-portugal" },
+                    { label: "France vs South Korea — tax comparison", href: "/compare/france-vs-south-korea" },
+                  ],
+                };
+
+                const links = compareLinks[slug] ?? [];
+                if (links.length === 0) return null;
+
+                return (
+                  <div className="mt-6 pt-6 border-t border-zinc-800/60">
+                    <p className="text-xs text-zinc-500 uppercase tracking-wider font-medium mb-3">
+                      Compare destinations
+                    </p>
+                    <div className="flex flex-col gap-2">
+                      {links.map((link) => (
+                        <a
+                          key={link.href}
+                          href={link.href}
+                          className="flex items-center justify-between bg-zinc-900/40 hover:bg-zinc-900 border border-zinc-800/60 hover:border-zinc-700 transition-all rounded-lg px-4 py-2.5"
+                        >
+                          <span className="text-sm text-zinc-400 hover:text-zinc-200 transition-colors">{link.label}</span>
+                          <span className="text-zinc-600 text-xs shrink-0 ml-3">→</span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })()}
             </div>
           )}
         </div>
