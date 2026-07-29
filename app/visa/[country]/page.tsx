@@ -4,6 +4,7 @@ import { countryFaqs } from "@/app/lib/faqData";
 import CountryIntelligenceClient from "./CountryIntelligenceClient";
 import CountryNarrative from "./CountryNarrative";
 import CountryFaq from "./CountryFaq";
+import CountryTaxSection from "./CountryTaxSection";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { ArrowLeft, Share2 } from "lucide-react";
@@ -189,6 +190,9 @@ export default async function CountryPage({ params }: { params: Promise<{ countr
 
           {/* The Dashboard UI */}
           <CountryIntelligenceClient country={country} />
+
+          {/* Dedicated tax section — renders for Spain, Portugal etc. where tax intent dominates */}
+          <CountryTaxSection country={country} />
           <CountryFaq faqs={faqs} countryName={country.name} />
 
           {/* Related guides — server-rendered links to guide pages for this country */}
