@@ -137,42 +137,34 @@ export const guidesData: GuideDefinition[] = [
     intro: "Moving from the UAE to Thailand is one of the most common digital nomad transitions in 2026 — and for good reason. The UAE offers 0% income tax but costs $3,200/month to live. Thailand's LTR Visa offers 17% flat tax on remitted income and costs $1,200/month. Below $8,000/month gross income, Thailand produces higher net savings than the UAE despite having income tax.",
     sections: [
       {
-        heading: "UAE vs Thailand: Net Savings at Key Income Levels",
+        heading: "Should You Move from UAE to Thailand as a Digital Nomad?",
+        content: "Below $10,000/month gross income, moving from UAE to Thailand produces higher net monthly savings — despite Thailand having a 17% flat tax on remitted income. The UAE's 0% income tax advantage is offset by its $3,200/month average living costs. Thailand's $1,200/month average living costs mean you save more in absolute terms at most income levels a digital nomad actually earns.",
         table: {
-          headers: ["Monthly Income", "UAE (0% tax, $3,200 costs)", "Thailand LTR (17% tax, $1,200 costs)", "Thailand Advantage"],
+          headers: ["Monthly Income", "UAE (0% tax, $3,200 costs)", "Thailand LTR (17% remitted, $1,200 costs)", "Monthly Difference"],
           rows: [
-            ["$3,000", "-$200/mo (doesn't qualify)", "$1,290/mo", "+$1,490"],
-            ["$5,000", "$1,800/mo", "$2,950/mo", "+$1,150"],
-            ["$8,000", "$4,800/mo", "$5,440/mo", "+$640"],
-            ["$10,000", "$6,800/mo", "$7,100/mo", "+$300"],
-            ["$15,000", "$11,800/mo", "$11,250/mo", "UAE +$550"],
+            ["$3,000", "–$200 (below UAE minimum)", "+$1,290", "Thailand +$1,490"],
+            ["$5,000", "+$1,800", "+$2,950", "Thailand +$1,150"],
+            ["$7,000", "+$3,800", "+$4,610", "Thailand +$810"],
+            ["$10,000", "+$6,800", "+$7,100", "Thailand +$300"],
+            ["$15,000", "+$11,800", "+$11,250", "UAE +$550"],
           ],
         },
-        content: "The crossover point is approximately $12,000–$15,000/month. Below that, Thailand's dramatically lower cost of living outweighs its 17% tax rate. Above $15,000/month, the UAE's 0% tax produces better net savings.",
       },
       {
         heading: "Thailand LTR Visa Requirements for UAE Residents",
-        content: "The Thailand Long-Term Resident (LTR) Visa is the correct visa for US remote workers moving from the UAE.",
-        list: [
-          "Income: $80,000/year ($6,667/month) minimum, documented over the past 2 years",
-          "Health insurance: Minimum $50,000 coverage or $100,000 in Thai bank deposits",
-          "Application: Online via the Thailand Board of Investment (BOI) portal",
-          "Processing time: 4–8 weeks",
-          "Visa duration: 10 years (5-year visa + 5-year renewal)",
-          "Work permit: Included — allows remote work for foreign employers",
-        ],
+        content: "The Thailand Long-Term Resident (LTR) Visa is the correct visa category for US remote workers moving from the UAE. You apply online through the Thailand Board of Investment (BOI) portal — no embassy visit required, no need to return to your home country first. Requirements: minimum $80,000/year ($6,667/month) income documented over the past 2 years, health insurance with minimum $50,000 coverage, and a clean background. Processing takes 4–8 weeks. The visa is issued for 10 years (5-year initial + 5-year renewal) and includes a digital work permit covering remote work for foreign employers.",
       },
       {
-        heading: "How Thailand's Tax System Works for UAE Expats",
-        content: "Thailand's LTR Visa applies a flat 17% income tax on income remitted into Thailand — money you transfer into a Thai bank account. Income kept in foreign accounts is not subject to Thai tax.\n\nFor a US nomad moving from Dubai with $7,000/month income:\n• Keep $3,000/month in a US or UAE account: taxed at 0%\n• Transfer $4,000/month to Thailand for living expenses: taxed at 17% ($680)\n• Effective total Thai tax: $680/month (9.7% effective rate)\n• After $1,200/month living costs: $5,120/month saved\n\nThis remittance-based structure gives you significant control over your effective tax rate. Most Thailand-based nomads structure transfers to minimize the taxable amount while covering local costs.",
+        heading: "How Thailand Taxes UAE Expats: The Remittance System",
+        content: "Thailand's LTR Visa applies a flat 17% income tax only on income you actually transfer into Thailand — money kept in UAE, US, or other foreign bank accounts is not subject to Thai tax at all. This remittance-based structure gives you direct control over your effective tax rate.\n\nExample at $7,000/month income: keep $3,000/month offshore (0% Thai tax), transfer $4,000/month to Thailand for living expenses (17% = $680 tax). Effective total Thai tax: $680/month (9.7% effective rate). After $1,200/month living costs: $5,120/month saved.\n\nMost nomads moving from Dubai set up a structured remittance plan before arriving — transferring only what they need monthly for expenses while accumulating savings offshore.",
       },
       {
-        heading: "Practical Steps: Moving From UAE to Thailand",
-        content: "Month 1–2 (while still in UAE): Apply for Thailand LTR Visa via BOI portal (4–8 week processing). Obtain health insurance meeting Thai requirements. Compile 2 years of income documentation (tax returns, bank statements, or employer letters).\n\nMonth 2–3: Receive LTR Visa approval. Arrange Thai bank account (Bangkok Bank, Kasikorn, or SCB accept foreign nationals with LTR documentation). Book accommodation in Chiang Mai, Bangkok, or Koh Samui for first 1–3 months.\n\nMonth 3 onwards: Cancel UAE residency visa (voluntary cancellation at GDRFA Dubai). Establish Thai residency address for BOI registration. Set up remittance structure to manage taxable income flow.\n\nCost of the transition: Thailand LTR Visa fee is approximately $200 USD.",
+        heading: "Step-by-Step: How to Move from UAE to Thailand",
+        content: "Month 1–2 (while still in Dubai): Apply for LTR Visa via Thailand BOI portal (4–8 week processing). Arrange qualifying health insurance. Compile 2 years of income documentation — tax returns, bank statements, or employer income letters. Arrange short-term accommodation in Chiang Mai or Bangkok for first 1–3 months.\n\nMonth 2–3: Receive LTR Visa approval. Open Thai bank account — Bangkok Bank, Kasikorn, or SCB all accept LTR holders with standard documentation. Set up remittance structure before leaving Dubai — determine how much you'll transfer monthly vs keep offshore.\n\nMonth 3 onward: Cancel UAE residence visa at GDRFA Dubai (voluntary cancellation). Register Thai address with BOI within 30 days of arrival. Begin monthly remittance from UAE or US accounts to Thai account for living costs.",
       },
       {
-        heading: "UAE vs Thailand: What You Give Up and Gain",
-        content: "What you gain moving to Thailand: $2,000+/month in additional savings at most income levels, 10-year visa stability with no annual renewals, Chiang Mai/Bangkok digital nomad infrastructure, and Southeast Asia as a travel base with direct flights to Japan, Vietnam, Indonesia, and India.\n\nWhat you give up: UAE's 0% tax on all income, Dubai's financial infrastructure (easier international banking), UTC+4 timezone advantage for EU/Asia client overlap, and UAE's long-term residency options.",
+        heading: "What You Give Up and Gain Moving from UAE to Thailand",
+        content: "What you gain: $800–$1,500/month more in savings at most income levels, a 10-year visa with no annual renewal stress, Chiang Mai or Bangkok's established nomad infrastructure (co-working density, fast fiber internet, large expat community), and Southeast Asia as a travel base — direct flights to Japan, Vietnam, Indonesia, India.\n\nWhat you give up: UAE's 0% tax on all income (Thailand taxes remitted amounts at 17%), Dubai's international banking infrastructure and ease of business setup, UTC+4 timezone which overlaps EU mornings and Asia afternoons simultaneously (Thailand's UTC+7 aligns better with Asia but loses the EU overlap), and UAE's options for long-term residency — though neither country offers a citizenship path.",
       },
     ],
     faqs: [
