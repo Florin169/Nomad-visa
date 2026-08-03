@@ -48,21 +48,21 @@ export const guidesData: GuideDefinition[] = [
     intro: "The Spain Digital Nomad Visa tax rate is 24% flat — applied under the Beckham Law (Régimen Especial para Trabajadores Desplazados) for the first 6 years of residency. This replaces Spain's standard progressive income tax (IRPF), which reaches 47% at higher income levels. For US remote workers earning $4,000–$10,000/month, the difference is thousands of dollars per year.",
     sections: [
       {
-        heading: "What Is the Beckham Law Tax Rate for Digital Nomads?",
-        content: "The Beckham Law locks your Spanish income tax at a flat 24% on income up to €600,000/year. Above that threshold, the rate jumps to 47%. For the vast majority of US remote workers, the 24% flat rate applies to 100% of their income.\n\nThis regime was originally created for high-earning executives relocating to Spain. The 2023 Ley de Startups (Startup Act) extended it explicitly to digital nomads — making Spain one of the few EU countries with a dedicated flat-rate tax regime for remote workers.",
+        heading: "Spain Digital Nomad Visa Tax Rate 2026: The Beckham Law Explained",
+        content: "The Spain Digital Nomad Visa tax rate is a flat 24% — applied under the Beckham Law (Régimen Especial para Trabajadores Desplazados) for the first 6 years of residency. This replaces Spain's standard progressive IRPF system, which reaches 47% at higher income levels. The Beckham Law was originally created for executive relocations and extended to digital nomads by the 2023 Ley de Startups.",
         list: [
-          "Flat 24% on all Spanish-sourced income up to €600,000/year",
-          "Foreign-sourced income (from non-Spanish clients) is exempt from Spanish tax entirely",
-          "Applies for a maximum of 6 years",
-          "Must be applied for within 6 months of Social Security registration using Modelo 149",
-          "Does not trigger automatically — you must opt in",
+          "Flat 24% rate on Spanish-sourced income up to €600,000/year",
+          "Foreign-sourced income from non-Spanish clients is fully exempt",
+          "Applies for maximum 6 tax years from first Spanish tax residency",
+          "Must apply via Modelo 149 within 6 months of Social Security registration",
+          "Does not activate automatically — you must opt in",
         ],
       },
       {
-        heading: "Spain Digital Nomad Visa Tax Rate vs Standard IRPF: The Numbers",
-        content: "At $5,000/month gross income:",
+        heading: "Spain Digital Nomad Visa Tax Rate vs Standard IRPF — The Numbers",
+        content: "At $5,000/month gross income, the difference between the Beckham Law and standard Spanish rates is significant:",
         table: {
-          headers: ["", "Standard IRPF", "Beckham Law"],
+          headers: ["", "Standard IRPF", "Beckham Law (DNV)"],
           rows: [
             ["Gross monthly income", "$5,000", "$5,000"],
             ["Effective tax rate", "~32%", "24%"],
@@ -74,30 +74,30 @@ export const guidesData: GuideDefinition[] = [
         },
       },
       {
-        heading: "Does the Spain Digital Nomad Visa Tax Rate Apply to Foreign Income?",
-        content: "This is the most misunderstood aspect of the Beckham Law. Under the regime, income earned from non-Spanish clients or employers is fully exempt from Spanish income tax. You only pay the 24% flat rate on income sourced within Spain.\n\nFor a US remote worker employed by a US company or freelancing for US clients:\n• Income from US clients: 0% Spanish tax\n• Income from Spanish clients: 24% flat rate\n• Total effective Spanish tax rate: potentially well below 24%\n\nThe 20% rule: Under the Digital Nomad Visa terms, no more than 20% of your total income can come from Spanish sources. If you stay within this limit, the bulk of your income remains Spanish-tax-exempt.",
+        heading: "What Income Is Taxed at Spain's Digital Nomad Visa Tax Rate?",
+        content: "The Beckham Law only applies the 24% rate to Spanish-sourced income. For most US remote workers earning from US clients or a US employer, the effective Spain digital nomad visa tax rate is close to 0% — foreign-sourced income is fully exempt.\n\nThe 20% rule: Under Digital Nomad Visa terms, no more than 20% of your total annual income can come from Spanish sources. Stay within this limit and up to 100% of your income is exempt from Spanish income tax.\n\nBreakdown by income source:\n• US clients or US employer: 0% Spanish tax\n• Spanish clients (up to 20% of total): 24% flat\n• Foreign capital gains and dividends: Exempt\n• Spanish capital gains: Taxed at standard rates (19–28%)",
       },
       {
-        heading: "The Modelo 149 Deadline — The Rule That Catches Most Applicants",
-        content: "Qualifying for the Beckham Law is not automatic when you receive your visa. You must file Modelo 149 with the Agencia Tributaria within 6 months of registering with Spanish Social Security. Miss this window by a single day and the application is permanently rejected — you default to standard progressive IRPF rates for your entire Spanish residency.\n\nMost US applicants work with a Spanish tax advisor specifically to manage this deadline. The fee for professional handling typically runs $500–$1,500 USD.",
+        heading: "Spain Digital Nomad Visa Tax Rate vs Other European Countries",
+        table: {
+          headers: ["Country", "Tax Regime", "Rate", "Foreign Income", "Duration"],
+          rows: [
+            ["Spain", "Beckham Law", "24% flat", "Exempt", "6 years"],
+            ["Portugal", "NHR 2.0", "20% flat", "Mostly exempt", "10 years"],
+            ["Estonia", "Flat income tax", "20% flat", "Taxable", "Indefinite"],
+            ["Germany", "Progressive", "30–38% effective", "Taxable", "N/A"],
+            ["France", "Progressive", "30–45% effective", "Taxable", "N/A"],
+          ],
+        },
+        content: "Spain's 24% is higher than Portugal's NHR 2.0 (20%) but lower than Germany and France. Both Spain and Portugal exempt most foreign income — making the effective rates for US nomads with foreign clients similar in practice. The key difference: Spain's minimum income threshold ($2,646/month) is lower than Portugal's ($3,480/month), making it the only accessible European flat-rate option for many mid-range earners.",
+      },
+      {
+        heading: "How to Apply for the Spain Digital Nomad Visa Tax Rate (Modelo 149)",
+        content: "The Beckham Law does not activate automatically. You must file Modelo 149 with the Agencia Tributaria (AEAT) within 6 calendar months of registering with Spanish Social Security.\n\nMissing this deadline means permanent rejection — you cannot reapply, and you default to progressive IRPF rates (up to 47%) for your entire Spanish residency. This is the single most dangerous rule for DNV applicants.\n\nStep 1: Register with Social Security (Seguridad Social) within 30 days of starting activities in Spain.\nStep 2: File Modelo 149 electronically through the AEAT portal within 6 months of your Social Security registration date.\nStep 3: Receive Beckham Law confirmation — typically 4–8 weeks after filing.\n\nMost US applicants hire a Spanish gestor (tax administrator) for this process. Professional fees: typically €300–€800.",
       },
       {
         heading: "Spain Digital Nomad Visa Minimum Income Requirement 2026",
-        content: "To qualify for the visa itself (separate from the Beckham Law), you must prove a minimum monthly income of €2,646 gross for a single applicant ($2,900 USD approximate). With dependents, add 75% of Spain's SMI per additional dependent.\n\nProof requirements: 3 months of certified bank statements or payslips. For freelancers, active service contracts with registered companies outside Spain are required.",
-      },
-      {
-        heading: "2026 Spain DNV Tax Rate vs Other European Nomad Visas",
-        table: {
-          headers: ["Country", "Tax Regime", "Rate", "Duration"],
-          rows: [
-            ["Spain", "Beckham Law", "24% flat", "6 years"],
-            ["Portugal", "NHR 2.0", "20% flat", "10 years"],
-            ["Estonia", "Flat income tax", "20% flat", "No cap"],
-            ["Germany", "Progressive", "30–38% effective", "N/A"],
-            ["France", "Progressive", "30–45% effective", "N/A"],
-          ],
-        },
-        content: "Portugal's NHR 2.0 offers a lower flat rate (20%) for a longer period (10 years), but carries a higher minimum income threshold ($3,480/month vs Spain's $2,646/month).",
+        content: "The visa income threshold is separate from the tax rate. To qualify for the Spain Digital Nomad Visa, you must prove a minimum gross monthly income of €2,646 for a single applicant (200% of Spain's SMI minimum wage as of 2026). With dependents, add 75% of SMI per additional dependent.\n\nProof requirements: 3 months of certified bank statements or payslips. Freelancers must show active service contracts with registered companies outside Spain.",
       },
     ],
     faqs: [
@@ -298,29 +298,43 @@ export const guidesData: GuideDefinition[] = [
     intro: "No — France does not have a dedicated digital nomad visa in 2026. Unlike Spain, Portugal, Estonia, and several other EU countries, France has not launched a visa specifically branded for remote workers. The closest legal alternative for US remote workers is the Talent Passport (Passeport Talent) — specifically the Business Creator or Salaried Employee categories. It functions similarly to a nomad visa but carries stricter qualification requirements and higher tax obligations.",
     sections: [
       {
-        heading: "What Is the France Talent Passport for Remote Workers?",
-        content: "The Talent Passport is a 4-year renewable residency permit for skilled foreign professionals, entrepreneurs, and remote workers. Unlike Spain's 1-year DNV or Portugal's D8, it is issued for 4 years upfront with no first-year temporary status.\n\nFor US remote workers, the relevant categories are:\n\nSalarié en mission (Remote Employee): For employees of foreign companies assigned to work in France. Requires employment contract, employer authorization letter, and proof the company has operated for 1+ year.\n\nCréation d'entreprise (Business Creator / Freelancer): For self-employed professionals. Requires a Master's degree or 5+ years of professional experience, a viable business plan, and proof of at least €30,000 in project financing.",
+        heading: "Why France Has No Digital Nomad Visa — And What Exists Instead",
+        content: "The French government's closest equivalent is the Talent Passport (Passeport Talent), which has existed since 2016 and covers remote employees and business creators — but with significantly stricter requirements than a standard digital nomad visa. Unlike Spain's Ley de Startups or Portugal's D8 which were purpose-built for remote workers, France's Talent Passport was designed for skilled professionals and entrepreneurs, not the broader nomad market.",
       },
       {
-        heading: "France Digital Nomad Visa Requirements 2026 (Talent Passport)",
+        heading: "What Is France's Alternative to a Digital Nomad Visa?",
+        content: "The Talent Passport (Passeport Talent) is the correct visa for US remote workers who want to live and work legally in France long-term. It is issued for 4 years upfront — longer than Spain's 1-year or Portugal's 1-year initial periods — and leads to citizenship eligibility after 5 years of legal residency.",
+        table: {
+          headers: ["Category", "Who It's For", "Key Requirement"],
+          rows: [
+            ["Salarié en mission", "Remote employees of foreign companies", "Employment contract + employer letter"],
+            ["Création d'entreprise", "Freelancers and business creators", "Master's degree or 5yr exp + €30,000 financing + business plan"],
+            ["Talent Passport (general)", "Researchers, artists, investors", "Varies by category"],
+          ],
+        },
+      },
+      {
+        heading: "France Talent Passport vs Spain DNV vs Portugal D8 — Requirements Compared",
+        content: "France's Talent Passport has no formal income minimum — but the qualification requirements make it harder to obtain than Spain or Portugal for most US remote workers.",
         table: {
           headers: ["Requirement", "France Talent Passport", "Spain DNV", "Portugal D8"],
           rows: [
             ["Income threshold", "No formal minimum", "€2,646/month", "€3,480/month"],
-            ["Qualification requirement", "Master's degree or 5yr exp", "None", "None"],
+            ["Qualification required", "Master's or 5yr experience", "None", "None"],
             ["Business plan required", "Yes (freelancers)", "No", "No"],
+            ["Project financing required", "€30,000", "None", "None"],
             ["Processing time", "6–10 weeks", "3–6 months", "4–8 weeks"],
-            ["Visa duration", "4 years", "1 year (renewable)", "1 year (renewable)"],
+            ["Visa duration", "4 years upfront", "1 year renewable", "1 year renewable"],
             ["Path to citizenship", "5 years", "10 years", "5 years"],
+            ["One-time visa fee", "~€99", "$865", "$533"],
           ],
         },
-        content: "France's Talent Passport has no income minimum — but the qualification and business plan requirements make it harder to obtain than Spain or Portugal despite the lack of a formal threshold.",
       },
       {
-        heading: "What Are the Tax Rates in France for Digital Nomads?",
-        content: "France has no flat-rate nomad tax regime equivalent to Spain's Beckham Law or Portugal's NHR 2.0. Remote workers on the Talent Passport are taxed under France's standard progressive income tax system.",
+        heading: "What Are the Income Tax Rates in France for Remote Workers?",
+        content: "France has no flat-rate nomad tax regime. Remote workers on the Talent Passport pay France's standard progressive income tax — there is no equivalent to Spain's Beckham Law (24% flat) or Portugal's NHR 2.0 (20% flat).\n\nAt $5,000/month ($60,000/year), a US remote worker in France faces an effective income tax rate of approximately 25–30%, plus social contributions if registered as self-employed. After $2,100/month average living costs, monthly savings are approximately $1,400 — compared to Spain's $2,000/month and Portugal's $2,400/month at the same income level.",
         table: {
-          headers: ["Annual Income", "French Tax Rate", "Effective Rate"],
+          headers: ["Annual Income", "French Income Tax Rate", "Effective Rate"],
           rows: [
             ["Up to €11,294", "0%", "0%"],
             ["€11,295–€28,797", "11%", "~5%"],
@@ -331,12 +345,12 @@ export const guidesData: GuideDefinition[] = [
         },
       },
       {
-        heading: "Should US Nomads Choose France Over Spain or Portugal?",
-        content: "Choose France if: EU citizenship in 5 years is your primary goal (same as Portugal, much faster than Spain's 10 years), you specifically want to live in Paris or other French cities, you have a Master's degree that simplifies the Talent Passport application, or language immersion is a priority.\n\nChoose Spain or Portugal instead if: Tax efficiency matters — both offer flat-rate regimes France lacks. You want a simpler application without a business plan. Budget matters — France's living costs ($2,100/month average) are 17–31% higher than Spain or Portugal.",
+        heading: "Should US Digital Nomads Choose France Instead of Spain or Portugal?",
+        content: "Choose France if EU citizenship in 5 years is your primary goal (same timeline as Portugal, much faster than Spain's 10 years), you specifically want to live in Paris or another French city, or you have a Master's degree and professional background that makes the Talent Passport straightforward to obtain.\n\nChoose Spain or Portugal instead if tax efficiency matters — France's 30–45% effective rate is significantly higher than Spain's 24% Beckham Law or Portugal's 20% NHR 2.0. France's $2,100/month average living costs are also 17–31% higher than Spain or Portugal, further reducing net savings.",
       },
       {
         heading: "How to Apply for France's Talent Passport as a US Citizen",
-        content: "1. Determine which Talent Passport category applies to your situation\n2. Prepare your business plan (freelancers) or employment documentation (employees)\n3. Apply at the nearest French consulate in the US (New York, Los Angeles, Chicago, Houston, Miami, San Francisco)\n4. Submit documentation including apostilled degree certificates, business plan, proof of financing, and health insurance\n5. Processing: 6–10 weeks\n6. Upon approval: enter France and complete residency registration with the local Prefecture within 3 months",
+        content: "Step 1: Determine your category — Salarié en mission (remote employee) or Création d'entreprise (freelancer/business creator).\nStep 2: Prepare documentation — for freelancers: apostilled degree certificates, detailed business plan, proof of €30,000 in project financing, health insurance. For employees: employment contract, employer authorization letter.\nStep 3: Apply at the nearest French consulate in the US — major locations: New York, Los Angeles, Chicago, Houston, Miami, San Francisco.\nStep 4: Processing takes 6–10 weeks from complete application submission.\nStep 5: Upon approval, enter France and register with the local Prefecture within 3 months of arrival.",
       },
     ],
     faqs: [
