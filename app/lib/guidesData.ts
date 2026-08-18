@@ -151,6 +151,29 @@ export const guidesData: GuideDefinition[] = [
         },
       },
       {
+        heading: "UAE vs Thailand Tax Calculator: Your Exact Net Savings at Every Income Level",
+        content: "Here is the precise tax and savings math for moving from UAE to Thailand at 7 income levels. UAE tax: 0% on all income. Thailand LTR tax: 17% flat on income remitted into Thailand only — money kept in UAE or US accounts is untaxed. Living costs: UAE $3,200/month, Thailand $1,200/month.",
+        table: {
+          headers: [
+            "Monthly Income",
+            "UAE: After Tax",
+            "UAE: After Living Costs",
+            "Thailand: After 17% Tax",
+            "Thailand: After Living Costs",
+            "Winner",
+          ],
+          rows: [
+            ["$3,000", "$3,000", "–$200 ❌", "$2,490", "+$1,290 ✓", "Thailand +$1,490"],
+            ["$4,000", "$4,000", "+$800", "$3,320", "+$2,120", "Thailand +$1,320"],
+            ["$5,000", "$5,000", "+$1,800", "$4,150", "+$2,950", "Thailand +$1,150"],
+            ["$6,667 (min)", "$6,667", "+$3,467", "$5,533", "+$4,333", "Thailand +$866"],
+            ["$8,000", "$8,000", "+$4,800", "$6,640", "+$5,440", "Thailand +$640"],
+            ["$10,000", "$10,000", "+$6,800", "$8,300", "+$7,100", "Thailand +$300"],
+            ["$15,000", "$15,000", "+$11,800", "$12,450", "+$11,250", "UAE +$550"],
+          ],
+        },
+      },
+      {
         heading: "Thailand LTR Visa Requirements for UAE Residents",
         content: "The Thailand Long-Term Resident (LTR) Visa is the correct visa category for US remote workers moving from the UAE. You apply online through the Thailand Board of Investment (BOI) portal — no embassy visit required, no need to return to your home country first. Requirements: minimum $80,000/year ($6,667/month) income documented over the past 2 years, health insurance with minimum $50,000 coverage, and a clean background. Processing takes 4–8 weeks. The visa is issued for 10 years (5-year initial + 5-year renewal) and includes a digital work permit covering remote work for foreign employers.",
       },
