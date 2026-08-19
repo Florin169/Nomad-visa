@@ -313,6 +313,10 @@ export const compareFaqs: Record<string, CompareFaq[]> = {
       q: "Which country has a faster path to EU citizenship?",
       a: "Both require 5 years of continuous legal residency for citizenship. Portugal's process is considered more straightforward: A2 Portuguese language test, clean record, and demonstrated ties. Spain requires 10 years for standard naturalization (though the DNV path involves 5 years to permanent residency first, then another 5 to citizenship). If EU citizenship is your goal, Portugal is the clear winner.",
     },
+    {
+      q: "Where can I find the complete Spain digital nomad visa tax guide?",
+      a: "Our complete Spain digital nomad visa tax guide covers the full Beckham Law mechanics, employee vs freelancer treatment, Modelo 149 deadline, US double taxation rules, and what happens after the 6-year period ends. See the full Spain digital nomad visa tax guide for 2026.",
+    },
   ],
 
   "portugal-vs-spain": [
@@ -331,6 +335,10 @@ export const compareFaqs: Record<string, CompareFaq[]> = {
     {
       q: "Which country has a faster path to EU citizenship?",
       a: "Both require 5 years of continuous legal residency for citizenship. Portugal's process is considered more straightforward: A2 Portuguese language test, clean record, and demonstrated ties. Spain requires 10 years for standard naturalization (though 5 years gets you permanent residency first). If EU citizenship is your goal, Portugal is the clear winner.",
+    },
+    {
+      q: "Where can I find the complete Spain digital nomad visa tax guide?",
+      a: "Our complete Spain digital nomad visa tax guide covers the full Beckham Law mechanics, employee vs freelancer treatment, Modelo 149 deadline, US double taxation rules, and what happens after the 6-year period ends. See the full Spain digital nomad visa tax guide for 2026.",
     },
   ],
 
@@ -355,6 +363,10 @@ export const compareFaqs: Record<string, CompareFaq[]> = {
       q: "Is $5,000/month enough for Spain or France as a digital nomad?",
       a: "Yes for Spain — comfortably. After the 24% Beckham Law flat tax ($1,200) and $1,800 living costs, you save $2,000/month. For France at $5,000/month: after approximately 30% effective tax ($1,500) and $2,100 living costs, you save $1,400/month. Spain produces $600/month more in savings at this income level. At $5,000/month you also exceed Spain's minimum income requirement ($2,646/month) with strong headroom.",
     },
+    {
+      q: "Where can I find the complete Spain digital nomad visa tax guide?",
+      a: "Our complete Spain digital nomad visa tax guide covers the full Beckham Law mechanics, employee vs freelancer treatment, Modelo 149 deadline, US double taxation rules, and what happens after the 6-year period ends. See the full Spain digital nomad visa tax guide for 2026.",
+    },
   ],
 
   "france-vs-spain": [
@@ -373,6 +385,10 @@ export const compareFaqs: Record<string, CompareFaq[]> = {
     {
       q: "Can I move from Spain to France after the Beckham Law ends?",
       a: "Yes — and some nomads plan this transition. After 6 years in Spain under the Beckham Law, transitioning to France resets your residency clock toward EU citizenship, though France's progressive tax rates (30–45%) would apply immediately with no flat-rate equivalent. A more common strategy is Spain for 6 years (Beckham Law) then Portugal (NHR 2.0, 20% flat for 10 years) to reset the flat-rate clock while maintaining EU residency.",
+    },
+    {
+      q: "Where can I find the complete Spain digital nomad visa tax guide?",
+      a: "Our complete Spain digital nomad visa tax guide covers the full Beckham Law mechanics, employee vs freelancer treatment, Modelo 149 deadline, US double taxation rules, and what happens after the 6-year period ends. See the full Spain digital nomad visa tax guide for 2026.",
     },
   ],
 
@@ -601,6 +617,10 @@ export const compareFaqs: Record<string, CompareFaq[]> = {
       q: "Can I live in Spain and Bali in the same year?",
       a: "Not legally under either visa simultaneously — you can only be a tax resident in one country at a time. What some nomads do: spend time in Bali as a tourist (Indonesia allows 30-day visa-free entry for most nationalities, extendable to 60 days) while maintaining Spanish tax residency. However, if you spend more than 183 days outside Spain in a year you may risk your Spanish residency status. The Spain DNV and Indonesia Second Home Visa are designed for primary residency, not split-year arrangements.",
     },
+    {
+      q: "Where can I find the complete Spain digital nomad visa tax guide?",
+      a: "Our complete Spain digital nomad visa tax guide covers the full Beckham Law mechanics, employee vs freelancer treatment, Modelo 149 deadline, US double taxation rules, and what happens after the 6-year period ends. See the full Spain digital nomad visa tax guide for 2026.",
+    },
   ],
 
   "indonesia-vs-spain": [
@@ -615,6 +635,10 @@ export const compareFaqs: Record<string, CompareFaq[]> = {
     {
       q: "Indonesia vs Spain — which has better internet for remote work?",
       a: "Spain is more reliable nationwide. Major Spanish cities (Madrid, Barcelona, Valencia) have consistent fiber infrastructure with average speeds of 300+ Mbps. In Bali, established nomad zones (Canggu, Ubud, Seminyak) have reliable fiber at co-working spaces (50–200 Mbps) but residential reliability varies and power outages during rainy season (November–March) can disrupt connectivity. Outside Bali's main hubs, Indonesian internet degrades significantly.",
+    },
+    {
+      q: "Where can I find the complete Spain digital nomad visa tax guide?",
+      a: "Our complete Spain digital nomad visa tax guide covers the full Beckham Law mechanics, employee vs freelancer treatment, Modelo 149 deadline, US double taxation rules, and what happens after the 6-year period ends. See the full Spain digital nomad visa tax guide for 2026.",
     },
   ],
 };

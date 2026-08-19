@@ -515,9 +515,10 @@ export const guidesData: GuideDefinition[] = [
       { label: "Run the exact Spain vs Portugal calculation at your income", href: "/compare/spain-vs-portugal" },
       { label: "Spain Digital Nomad Visa details", href: "/visa/spain" },
       { label: "Portugal D8 Visa details", href: "/visa/portugal" },
+      { label: "Complete Spain digital nomad visa tax guide", href: "/guides/digital-nomad-visa-spain-tax-2026" },
     ],
     disclaimer: "Data reflects 2026 Spain Digital Nomad Visa (Ley de Startups) and Portugal D8 Digital Nomad Visa legislative frameworks. Always verify with qualified local tax advisors before making residency decisions. NomadTaxIndex is an intelligence tool, not a legal or tax service.",
-    relatedGuides: ["spain-digital-nomad-visa-tax-rate-2026", "portugal-digital-nomad-tax-calculator-2026", "does-france-have-a-digital-nomad-visa"],
+    relatedGuides: ["digital-nomad-visa-spain-tax-2026", "spain-digital-nomad-visa-tax-rate-2026", "portugal-digital-nomad-tax-calculator-2026"],
   },
 
   // ─── GUIDE 6 ────────────────────────────────────────────────────────────────

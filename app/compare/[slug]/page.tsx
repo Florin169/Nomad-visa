@@ -146,6 +146,23 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
         countryBName={countryB.name}
       />
 
+      {/* Spain tax guide link — renders on all compare pages featuring Spain */}
+      {(countryA.id === "spain" || countryB.id === "spain") && (
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 pb-6">
+          <a
+            href="/guides/digital-nomad-visa-spain-tax-2026"
+            className="flex items-center justify-between bg-zinc-900/60 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 transition-all rounded-xl px-5 py-4 w-full"
+          >
+            <div>
+              <p className="text-xs text-zinc-500 mb-1">Spain tax guide</p>
+              <p className="text-sm font-medium text-zinc-200">
+                Digital Nomad Visa Spain Tax 2026 — Complete Beckham Law Guide →
+              </p>
+            </div>
+          </a>
+        </div>
+      )}
+
       <nav
         className="max-w-6xl mx-auto px-4 sm:px-6 pb-12 flex flex-col sm:flex-row gap-3"
         aria-label="View individual country details"
