@@ -170,10 +170,7 @@ export default async function CountryPage({ params }: { params: Promise<{ countr
           </div>
         </nav>
 
-        {/* Hidden H1 for SEO - Ensures Google knows the primary topic even if the UI uses fancy headings */}
-        <h1 className="sr-only">
-          {country.name} Digital Nomad Visa 2026 — Tax, Savings, and Requirements
-        </h1>
+        
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
           {/* Breadcrumbs - Essential for Google Search "Path" visibility */}
